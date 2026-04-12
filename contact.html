@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Jayvee Hilario — OOP E-Portfolio.">
+  <title>Contact — Jayvee Hilario</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Jayvee Hilario</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="midterm.html" class="nav__link">Midterm</a></li>
+        <li><a href="final.html" class="nav__link">Final</a></li>
+        <li><a href="contact.html" class="nav__link active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <header class="page-header">
+      <div class="container">
+        <p class="page-header__label">Get in Touch</p>
+        <h1 class="page-header__title">Contact</h1>
+        <p class="page-header__description">
+          Have questions about my work or want to connect? Reach out through any of the channels below.
+        </p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div class="contact-list fade-in">
+
+            <div class="contact-item">
+              <p class="contact-item__label">Name</p>
+              <p class="contact-item__value">Jayvee Hilario</p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-item__label">Email</p>
+              <p class="contact-item__value">
+                <a href="mailto:jayvee.hilario@example.com">jayvee.hilario@example.com</a>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-item__label">School</p>
+              <p class="contact-item__value">Polytechnic University of the Philippines</p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-item__label">Program</p>
+              <p class="contact-item__value">BSIT — Object-Oriented Programming</p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-item__label">GitHub</p>
+              <p class="contact-item__value">
+                <a href="https://github.com/jayveehilario" target="_blank" rel="noopener noreferrer">github.com/jayveehilario</a>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-item__label">LinkedIn</p>
+              <p class="contact-item__value">
+                <a href="https://linkedin.com/in/jayveehilario" target="_blank" rel="noopener noreferrer">linkedin.com/in/jayveehilario</a>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Form -->
+          <div class="fade-in">
+            <form class="contact-form" id="contact-form" novalidate>
+              <h2 class="contact-form__title">Send a message</h2>
+
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" name="name" placeholder="Your name" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="you@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="What is this about?">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width: 100%; text-align: center;">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--border">
+      <div class="container">
+        <h2 class="section-title fade-in">About this portfolio</h2>
+        <p class="section-subtitle fade-in" style="max-width: 600px;">
+          Built with HTML, CSS, and JavaScript — reflecting the same principles
+          of modularity, encapsulation, and organization learned in OOP. 
+          Every element has a purpose. Nothing is unnecessary.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">2026 Jayvee Hilario</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="midterm.html" class="footer__link">Midterm</a></li>
+          <li><a href="final.html" class="footer__link">Final</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

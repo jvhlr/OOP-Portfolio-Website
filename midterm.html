@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Midterm outputs — Quizzes, Seatwork, Java Activities, and Midterm Exam with reflections.">
+  <title>Midterm — Jayvee Hilario</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Jayvee Hilario</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="midterm.html" class="nav__link active">Midterm</a></li>
+        <li><a href="final.html" class="nav__link">Final</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ═══ PAGE HEADER ═══ -->
+    <header class="page-header">
+      <div class="container">
+        <p class="page-header__label">Midterm Period</p>
+        <h1 class="page-header__title">Midterm Outputs</h1>
+        <p class="page-header__description">
+          Quizzes, seatwork, programming activities, and the midterm exam — 
+          documenting foundational OOP understanding in Java.
+        </p>
+      </div>
+    </header>
+
+    <!-- ═══ CONTENT ═══ -->
+    <section class="section">
+      <div class="container" data-tabs>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="Midterm sections">
+          <button class="tab active" data-target="p-quizzes" role="tab" aria-selected="true">Quizzes</button>
+          <button class="tab" data-target="p-seatwork" role="tab" aria-selected="false">Seatwork</button>
+          <button class="tab" data-target="p-activities" role="tab" aria-selected="false">Activities</button>
+          <button class="tab" data-target="p-exam" role="tab" aria-selected="false">Exam</button>
+        </div>
+
+
+        <!-- ══════════ QUIZZES ══════════ -->
+        <div class="tab-panel active" id="p-quizzes" role="tabpanel">
+
+          <h2 class="section-title fade-in">Quizzes</h2>
+          <p class="section-subtitle fade-in">
+            Theoretical assessments covering OOP fundamentals.
+          </p>
+
+          <!-- Quiz 1 -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Quiz 1</div>
+                <div class="card__title">Introduction to OOP</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">1.</span> What is Object-Oriented Programming?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" that contain data (fields/attributes) and code (methods). It organizes software design around data rather than functions and logic.</p>
+                  </div>
+                  <p class="qa__explanation">OOP models real-world entities as objects. For example, a <code>Car</code> object has attributes like <code>color</code> and <code>speed</code>, and methods like <code>drive()</code> and <code>brake()</code>. This makes code more modular, reusable, and maintainable.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">2.</span> What is the difference between a class and an object?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">A class is a blueprint that defines attributes and behaviors. An object is a specific instance of a class created using the <code>new</code> keyword.</p>
+                  </div>
+                  <p class="qa__explanation">Think of a class as a cookie cutter and an object as the actual cookie. <code>class Dog { }</code> defines what a Dog is, while <code>Dog myDog = new Dog();</code> creates one in memory.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">3.</span> What are the four pillars of OOP?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Encapsulation, Inheritance, Polymorphism, and Abstraction.</p>
+                  </div>
+                  <p class="qa__explanation">These four principles form the foundation of OOP. Encapsulation bundles data with methods; Inheritance lets classes derive from others; Polymorphism allows multiple forms; Abstraction hides complexity.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">4.</span> What is a constructor in Java?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">A constructor is a special method invoked automatically when an object is created. It has the same name as the class and no return type.</p>
+                  </div>
+                  <p class="qa__explanation">Constructors initialize object state. Java provides a default no-arg constructor if none is defined. You can create parameterized constructors: <code>public Student(String name) { this.name = name; }</code></p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">5.</span> What are access modifiers in Java?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Access modifiers control visibility: <code>public</code>, <code>private</code>, <code>protected</code>, and default (package-private).</p>
+                  </div>
+                  <p class="qa__explanation"><code>public</code> — accessible everywhere; <code>private</code> — same class only; <code>protected</code> — same package + subclasses; default — same package only. These enforce encapsulation.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiz 2 -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Quiz 2</div>
+                <div class="card__title">Encapsulation &amp; Methods</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">1.</span> What is encapsulation and why is it important?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Encapsulation is bundling data and methods within a class while restricting direct access using access modifiers.</p>
+                  </div>
+                  <p class="qa__explanation">It protects internal state from unintended modification. A <code>BankAccount</code> class hides the balance field and provides <code>deposit()</code> and <code>withdraw()</code> with validation.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">2.</span> What is the purpose of getter and setter methods?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Getters retrieve private field values. Setters allow controlled modification with optional validation logic.</p>
+                  </div>
+                  <p class="qa__explanation">Instead of <code>object.balance</code> directly, we use <code>getBalance()</code> and <code>setBalance()</code>. The setter can include validation like <code>if (amount >= 0)</code>.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">3.</span> What is method overloading?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">Defining multiple methods with the same name but different parameter lists within the same class. Resolved at compile-time.</p>
+                  </div>
+                  <p class="qa__explanation"><code>add(int a, int b)</code> and <code>add(double a, double b)</code> are overloaded. Java determines which to call based on arguments passed. This is static polymorphism.</p>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">4.</span> What is the <code>this</code> keyword in Java?</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text"><code>this</code> refers to the current object instance. Used to distinguish instance variables from parameters with the same name.</p>
+                  </div>
+                  <p class="qa__explanation">In <code>public Student(String name) { this.name = name; }</code>, <code>this.name</code> is the instance variable while <code>name</code> is the parameter.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /quizzes -->
+
+
+        <!-- ══════════ SEATWORK ══════════ -->
+        <div class="tab-panel" id="p-seatwork" role="tabpanel">
+
+          <h2 class="section-title fade-in">Seatwork</h2>
+          <p class="section-subtitle fade-in">In-class exercises applying OOP concepts.</p>
+
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Seatwork 1</div>
+                <div class="card__title">Class Design Basics</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">1.</span> Create a <code>Student</code> class with name, age, and GPA fields. Include a constructor and a display method.</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">See code below.</p>
+                  </div>
+
+                  <div class="code-block">
+                    <div class="code-block__header">
+                      <span class="code-block__filename">Student.java</span>
+                      <button class="code-block__copy">Copy</button>
+                    </div>
+                    <div class="code-block__body">
+<pre><span class="kw">public class</span> <span class="typ">Student</span> {
+    <span class="kw">private</span> <span class="typ">String</span> name;
+    <span class="kw">private int</span> age;
+    <span class="kw">private double</span> gpa;
+
+    <span class="kw">public</span> <span class="fn">Student</span>(<span class="typ">String</span> name, <span class="kw">int</span> age, <span class="kw">double</span> gpa) {
+        <span class="kw">this</span>.name = name;
+        <span class="kw">this</span>.age = age;
+        <span class="kw">this</span>.gpa = gpa;
+    }
+
+    <span class="kw">public void</span> <span class="fn">displayInfo</span>() {
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Name: "</span> + name);
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Age: "</span> + age);
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"GPA: "</span> + gpa);
+    }
+}</pre>
+                    </div>
+                  </div>
+
+                  <p class="qa__explanation">Demonstrates encapsulation: fields are <code>private</code> and initialized through the constructor. The <code>displayInfo()</code> method provides controlled output.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Seatwork 2</div>
+                <div class="card__title">Inheritance Practice</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">1.</span> Create a <code>Person</code> superclass, then a <code>Student</code> subclass that adds a studentId field.</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">See code below.</p>
+                  </div>
+
+                  <div class="code-block">
+                    <div class="code-block__header">
+                      <span class="code-block__filename">Person.java</span>
+                      <button class="code-block__copy">Copy</button>
+                    </div>
+                    <div class="code-block__body">
+<pre><span class="kw">public class</span> <span class="typ">Person</span> {
+    <span class="kw">protected</span> <span class="typ">String</span> name;
+    <span class="kw">protected int</span> age;
+
+    <span class="kw">public</span> <span class="fn">Person</span>(<span class="typ">String</span> name, <span class="kw">int</span> age) {
+        <span class="kw">this</span>.name = name;
+        <span class="kw">this</span>.age = age;
+    }
+
+    <span class="kw">public void</span> <span class="fn">display</span>() {
+        <span class="typ">System</span>.out.<span class="fn">println</span>(name + <span class="str">", Age: "</span> + age);
+    }
+}
+
+<span class="kw">public class</span> <span class="typ">Student</span> <span class="kw">extends</span> <span class="typ">Person</span> {
+    <span class="kw">private</span> <span class="typ">String</span> studentId;
+
+    <span class="kw">public</span> <span class="fn">Student</span>(<span class="typ">String</span> name, <span class="kw">int</span> age, <span class="typ">String</span> studentId) {
+        <span class="kw">super</span>(name, age);
+        <span class="kw">this</span>.studentId = studentId;
+    }
+
+    <span class="ann">@Override</span>
+    <span class="kw">public void</span> <span class="fn">display</span>() {
+        <span class="kw">super</span>.<span class="fn">display</span>();
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Student ID: "</span> + studentId);
+    }
+}</pre>
+                    </div>
+                  </div>
+
+                  <p class="qa__explanation"><code>Student</code> inherits from <code>Person</code> using <code>extends</code>. The <code>super()</code> call passes arguments to the parent constructor. <code>@Override</code> indicates the method replaces the parent's implementation.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /seatwork -->
+
+
+        <!-- ══════════ ACTIVITIES ══════════ -->
+        <div class="tab-panel" id="p-activities" role="tabpanel">
+
+          <h2 class="section-title fade-in">Programming Activities</h2>
+          <p class="section-subtitle fade-in">Hands-on Java programs demonstrating OOP in action.</p>
+
+          <!-- ATM -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Activity 1</div>
+                <div class="card__title">Simple ATM System</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__filename">ATM.java</span>
+                    <button class="code-block__copy">Copy</button>
+                  </div>
+                  <div class="code-block__body">
+<pre><span class="kw">import</span> java.util.Scanner;
+
+<span class="kw">public class</span> <span class="typ">ATM</span> {
+    <span class="kw">private double</span> balance;
+    <span class="kw">private</span> <span class="typ">String</span> accountHolder;
+
+    <span class="kw">public</span> <span class="fn">ATM</span>(<span class="typ">String</span> accountHolder, <span class="kw">double</span> initialBalance) {
+        <span class="kw">this</span>.accountHolder = accountHolder;
+        <span class="kw">this</span>.balance = initialBalance;
+    }
+
+    <span class="kw">public void</span> <span class="fn">checkBalance</span>() {
+        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Balance: P%.2f%n"</span>, balance);
+    }
+
+    <span class="kw">public void</span> <span class="fn">deposit</span>(<span class="kw">double</span> amount) {
+        <span class="kw">if</span> (amount > <span class="num">0</span>) {
+            balance += amount;
+            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Deposited: P%.2f%n"</span>, amount);
+        } <span class="kw">else</span> {
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Invalid amount."</span>);
+        }
+    }
+
+    <span class="kw">public void</span> <span class="fn">withdraw</span>(<span class="kw">double</span> amount) {
+        <span class="kw">if</span> (amount > <span class="num">0</span> && amount <= balance) {
+            balance -= amount;
+            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Withdrawn: P%.2f%n"</span>, amount);
+        } <span class="kw">else if</span> (amount > balance) {
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Insufficient funds."</span>);
+        } <span class="kw">else</span> {
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Invalid amount."</span>);
+        }
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="typ">Scanner</span> sc = <span class="kw">new</span> <span class="typ">Scanner</span>(<span class="typ">System</span>.in);
+        <span class="typ">ATM</span> atm = <span class="kw">new</span> <span class="typ">ATM</span>(<span class="str">"Jayvee"</span>, <span class="num">10000.00</span>);
+        <span class="kw">int</span> choice;
+
+        <span class="kw">do</span> {
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"\n=== ATM Menu ==="</span>);
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"1. Check Balance"</span>);
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"2. Deposit"</span>);
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"3. Withdraw"</span>);
+            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"4. Exit"</span>);
+            <span class="typ">System</span>.out.<span class="fn">print</span>(<span class="str">"Choose: "</span>);
+            choice = sc.<span class="fn">nextInt</span>();
+
+            <span class="kw">switch</span> (choice) {
+                <span class="kw">case</span> <span class="num">1</span>: atm.<span class="fn">checkBalance</span>(); <span class="kw">break</span>;
+                <span class="kw">case</span> <span class="num">2</span>:
+                    <span class="typ">System</span>.out.<span class="fn">print</span>(<span class="str">"Amount: "</span>);
+                    atm.<span class="fn">deposit</span>(sc.<span class="fn">nextDouble</span>());
+                    <span class="kw">break</span>;
+                <span class="kw">case</span> <span class="num">3</span>:
+                    <span class="typ">System</span>.out.<span class="fn">print</span>(<span class="str">"Amount: "</span>);
+                    atm.<span class="fn">withdraw</span>(sc.<span class="fn">nextDouble</span>());
+                    <span class="kw">break</span>;
+                <span class="kw">case</span> <span class="num">4</span>:
+                    <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Thank you!"</span>);
+                    <span class="kw">break</span>;
+                <span class="kw">default</span>:
+                    <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Invalid option."</span>);
+            }
+        } <span class="kw">while</span> (choice != <span class="num">4</span>);
+        sc.<span class="fn">close</span>();
+    }
+}</pre>
+                  </div>
+                </div>
+
+                <div class="output">
+                  <div class="output__header">Output</div>
+                  <div class="output__body">=== ATM Menu ===
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. Exit
+Choose: 1
+Balance: P10000.00
+
+=== ATM Menu ===
+Choose: 2
+Amount: 5000
+Deposited: P5000.00
+
+=== ATM Menu ===
+Choose: 4
+Thank you!</div>
+                </div>
+
+                <div class="explanation">
+                  <div class="explanation__title">Logic</div>
+                  <div class="explanation__text">
+                    <ul>
+                      <li><strong>Encapsulation</strong> — The <code>balance</code> field is private, modified only through <code>deposit()</code> and <code>withdraw()</code> with validation.</li>
+                      <li><strong>Constructor</strong> — Account holder and balance are initialized at creation.</li>
+                      <li><strong>Menu-driven</strong> — A do-while loop with switch creates the interactive interface.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade Calculator -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Activity 2</div>
+                <div class="card__title">Grade Calculator</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__filename">GradeCalculator.java</span>
+                    <button class="code-block__copy">Copy</button>
+                  </div>
+                  <div class="code-block__body">
+<pre><span class="kw">public class</span> <span class="typ">GradeCalculator</span> {
+    <span class="kw">private double</span> grade;
+    <span class="kw">private</span> <span class="typ">String</span> studentName;
+
+    <span class="kw">public</span> <span class="fn">GradeCalculator</span>(<span class="typ">String</span> name, <span class="kw">double</span> grade) {
+        <span class="kw">this</span>.studentName = name;
+        <span class="kw">this</span>.grade = grade;
+    }
+
+    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getLetterGrade</span>() {
+        <span class="kw">if</span> (grade >= <span class="num">90</span>) <span class="kw">return</span> <span class="str">"A - Excellent"</span>;
+        <span class="kw">else if</span> (grade >= <span class="num">80</span>) <span class="kw">return</span> <span class="str">"B - Very Good"</span>;
+        <span class="kw">else if</span> (grade >= <span class="num">70</span>) <span class="kw">return</span> <span class="str">"C - Good"</span>;
+        <span class="kw">else if</span> (grade >= <span class="num">60</span>) <span class="kw">return</span> <span class="str">"D - Passed"</span>;
+        <span class="kw">else return</span> <span class="str">"F - Failed"</span>;
+    }
+
+    <span class="kw">public void</span> <span class="fn">displayResult</span>() {
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Student: "</span> + studentName);
+        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Grade: %.1f%n"</span>, grade);
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Letter: "</span> + <span class="fn">getLetterGrade</span>());
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Remarks: "</span> + (grade >= <span class="num">60</span> ? <span class="str">"PASSED"</span> : <span class="str">"FAILED"</span>));
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="typ">GradeCalculator</span> gc = <span class="kw">new</span> <span class="typ">GradeCalculator</span>(<span class="str">"Jayvee"</span>, <span class="num">85.5</span>);
+        gc.<span class="fn">displayResult</span>();
+    }
+}</pre>
+                  </div>
+                </div>
+
+                <div class="output">
+                  <div class="output__header">Output</div>
+                  <div class="output__body">Student: Jayvee
+Grade: 85.5
+Letter: B - Very Good
+Remarks: PASSED</div>
+                </div>
+
+                <div class="explanation">
+                  <div class="explanation__title">Logic</div>
+                  <div class="explanation__text">
+                    <ul>
+                      <li><strong>If-else ladder</strong> — Classifies grades into letter grades.</li>
+                      <li><strong>Ternary operator</strong> — Concise pass/fail logic.</li>
+                      <li><strong>Method decomposition</strong> — Each task separated into its own method.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Records -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Activity 3</div>
+                <div class="card__title">Student Record System</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+
+                <div class="code-block">
+                  <div class="code-block__header">
+                    <span class="code-block__filename">StudentRecords.java</span>
+                    <button class="code-block__copy">Copy</button>
+                  </div>
+                  <div class="code-block__body">
+<pre><span class="kw">public class</span> <span class="typ">StudentRecords</span> {
+    <span class="kw">private</span> <span class="typ">String</span>[] names;
+    <span class="kw">private double</span>[] grades;
+    <span class="kw">private int</span> count;
+
+    <span class="kw">public</span> <span class="fn">StudentRecords</span>(<span class="kw">int</span> capacity) {
+        names = <span class="kw">new</span> <span class="typ">String</span>[capacity];
+        grades = <span class="kw">new double</span>[capacity];
+        count = <span class="num">0</span>;
+    }
+
+    <span class="kw">public void</span> <span class="fn">addStudent</span>(<span class="typ">String</span> name, <span class="kw">double</span> grade) {
+        <span class="kw">if</span> (count < names.length) {
+            names[count] = name;
+            grades[count] = grade;
+            count++;
+        }
+    }
+
+    <span class="kw">public double</span> <span class="fn">getAverage</span>() {
+        <span class="kw">double</span> sum = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < count; i++) sum += grades[i];
+        <span class="kw">return</span> count > <span class="num">0</span> ? sum / count : <span class="num">0</span>;
+    }
+
+    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getHighest</span>() {
+        <span class="kw">int</span> maxIdx = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i < count; i++) {
+            <span class="kw">if</span> (grades[i] > grades[maxIdx]) maxIdx = i;
+        }
+        <span class="kw">return</span> names[maxIdx] + <span class="str">" ("</span> + grades[maxIdx] + <span class="str">")"</span>;
+    }
+
+    <span class="kw">public void</span> <span class="fn">displayAll</span>() {
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"=== Student Records ==="</span>);
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < count; i++)
+            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"%s: %.1f%n"</span>, names[i], grades[i]);
+        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Average: %.1f%n"</span>, <span class="fn">getAverage</span>());
+        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Highest: "</span> + <span class="fn">getHighest</span>());
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="typ">StudentRecords</span> r = <span class="kw">new</span> <span class="typ">StudentRecords</span>(<span class="num">5</span>);
+        r.<span class="fn">addStudent</span>(<span class="str">"Alice"</span>, <span class="num">92.5</span>);
+        r.<span class="fn">addStudent</span>(<span class="str">"Bob"</span>, <span class="num">85.0</span>);
+        r.<span class="fn">addStudent</span>(<span class="str">"Carol"</span>, <span class="num">78.3</span>);
+        r.<span class="fn">displayAll</span>();
+    }
+}</pre>
+                  </div>
+                </div>
+
+                <div class="output">
+                  <div class="output__header">Output</div>
+                  <div class="output__body">=== Student Records ===
+Alice: 92.5
+Bob: 85.0
+Carol: 78.3
+Average: 85.3
+Highest: Alice (92.5)</div>
+                </div>
+
+                <div class="explanation">
+                  <div class="explanation__title">Key Learnings</div>
+                  <div class="explanation__text">
+                    <ul>
+                      <li><strong>Parallel arrays</strong> — <code>names[]</code> and <code>grades[]</code> store data for multiple students.</li>
+                      <li><strong>Counter pattern</strong> — <code>count</code> tracks entries vs. capacity.</li>
+                      <li><strong>Helper methods</strong> — <code>getAverage()</code> and <code>getHighest()</code> encapsulate calculations.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /activities -->
+
+
+        <!-- ══════════ EXAM ══════════ -->
+        <div class="tab-panel" id="p-exam" role="tabpanel">
+
+          <h2 class="section-title fade-in">Midterm Examination</h2>
+          <p class="section-subtitle fade-in">Theory and coding problems with a personal reflection.</p>
+
+          <div class="card expanded fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <div class="card__label">Midterm Exam</div>
+                <div class="card__title">OOP Fundamentals</div>
+              </div>
+              <span class="card__chevron">&#9662;</span>
+            </div>
+            <div class="card__body" style="max-height: 8000px;">
+              <div class="card__content">
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">1.</span> Explain the difference between method overloading and method overriding.</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text"><strong>Overloading</strong> — same name, different parameters, same class, compile-time. <strong>Overriding</strong> — same signature, subclass provides new implementation, runtime.</p>
+                  </div>
+                </div>
+
+                <div class="qa">
+                  <p class="qa__question"><span class="qa__question-num">2.</span> Write a program demonstrating inheritance with Shape, Circle, and Rectangle.</p>
+                  <div class="qa__answer">
+                    <p class="qa__answer-label">Answer</p>
+                    <p class="qa__answer-text">See code below.</p>
+                  </div>
+
+                  <div class="code-block">
+                    <div class="code-block__header">
+                      <span class="code-block__filename">ShapeDemo.java</span>
+                      <button class="code-block__copy">Copy</button>
+                    </div>
+                    <div class="code-block__body">
+<pre><span class="kw">abstract class</span> <span class="typ">Shape</span> {
+    <span class="kw">abstract double</span> <span class="fn">area</span>();
+
+    <span class="kw">public void</span> <span class="fn">display</span>() {
+        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"%s area: %.2f%n"</span>,
+            <span class="kw">this</span>.<span class="fn">getClass</span>().<span class="fn">getSimpleName</span>(), <span class="fn">area</span>());
+    }
+}
+
+<span class="kw">class</span> <span class="typ">Circle</span> <span class="kw">extends</span> <span class="typ">Shape</span> {
+    <span class="kw">private double</span> radius;
+    <span class="kw">public</span> <span class="fn">Circle</span>(<span class="kw">double</span> r) { <span class="kw">this</span>.radius = r; }
+
+    <span class="ann">@Override</span>
+    <span class="kw">double</span> <span class="fn">area</span>() { <span class="kw">return</span> <span class="typ">Math</span>.PI * radius * radius; }
+}
+
+<span class="kw">class</span> <span class="typ">Rectangle</span> <span class="kw">extends</span> <span class="typ">Shape</span> {
+    <span class="kw">private double</span> w, h;
+    <span class="kw">public</span> <span class="fn">Rectangle</span>(<span class="kw">double</span> w, <span class="kw">double</span> h) { <span class="kw">this</span>.w = w; <span class="kw">this</span>.h = h; }
+
+    <span class="ann">@Override</span>
+    <span class="kw">double</span> <span class="fn">area</span>() { <span class="kw">return</span> w * h; }
+}
+
+<span class="kw">public class</span> <span class="typ">ShapeDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="typ">Shape</span>[] shapes = { <span class="kw">new</span> <span class="typ">Circle</span>(<span class="num">5.0</span>), <span class="kw">new</span> <span class="typ">Rectangle</span>(<span class="num">4.0</span>, <span class="num">6.0</span>) };
+        <span class="kw">for</span> (<span class="typ">Shape</span> s : shapes) s.<span class="fn">display</span>();
+    }
+}</pre>
+                    </div>
+                  </div>
+
+                  <div class="output">
+                    <div class="output__header">Output</div>
+                    <div class="output__body">Circle area: 78.54
+Rectangle area: 24.00</div>
+                  </div>
+                </div>
+
+                <!-- Reflection -->
+                <div class="reflection">
+                  <div class="reflection__title">Midterm Reflection</div>
+
+                  <div class="reflection__section">
+                    <p class="reflection__label">What I Learned</p>
+                    <p class="reflection__text">"The midterm period gave me a solid foundation in OOP. I went from understanding what classes and objects are conceptually to actually building programs that use encapsulation, constructors, and methods. The ATM project was a turning point — it showed me how OOP organizes code around real-world entities."</p>
+                  </div>
+
+                  <div class="reflection__section">
+                    <p class="reflection__label">Challenges</p>
+                    <p class="reflection__text">"I struggled with the <code>this</code> keyword and how constructors work with inheritance via <code>super()</code>. The distinction between overloading and overriding was confusing at first. Writing the exam under time pressure revealed gaps in my understanding."</p>
+                  </div>
+
+                  <div class="reflection__section">
+                    <p class="reflection__label">Solutions</p>
+                    <p class="reflection__text">"I practiced by building small programs from scratch instead of just reading theory. Drawing class diagrams before coding helped me visualize inheritance hierarchies. Reviewing quiz feedback identified specific gaps."</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /exam -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">2026 Jayvee Hilario</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="midterm.html" class="footer__link">Midterm</a></li>
+          <li><a href="final.html" class="footer__link">Final</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
