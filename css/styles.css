@@ -465,7 +465,14 @@ button:focus-visible {
   border-bottom: 1px solid var(--border);
   margin-bottom: var(--sp-12);
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .tab {
