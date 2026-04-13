@@ -1190,17 +1190,88 @@ button:focus-visible {
 
 
 /* ============================================================
-   25. PRINT
+   25. EMPTY STATE — "Content Incoming" placeholders
+   ============================================================ */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-16) var(--sp-8);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  margin-bottom: var(--sp-8);
+}
+
+.empty-state--wide {
+  max-width: 100%;
+}
+
+.empty-state__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-raised);
+  margin-bottom: var(--sp-6);
+  position: relative;
+}
+
+.empty-state__icon::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  animation: emptyPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes emptyPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.2); }
+}
+
+.empty-state__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-3);
+  letter-spacing: -0.01em;
+}
+
+.empty-state__text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+
+/* ============================================================
+   26. PRINT
    ============================================================ */
 @media print {
   .nav, .progress, .btn { display: none; }
   body { background: #fff; color: #000; }
   .card__body { max-height: none !important; }
+  .empty-state { border-style: solid; }
 }
 
 
 /* ============================================================
-   26. UTILITY — nowrap
+   27. UTILITY — nowrap
    ============================================================ */
 .nowrap {
   white-space: nowrap;

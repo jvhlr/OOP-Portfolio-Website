@@ -45,27 +45,13 @@
         <h2 class="section-title fade-in">Growth from Midterm to Final</h2>
         <p class="section-subtitle fade-in">How my understanding, code quality, and reflective thinking evolved.</p>
 
-        <div class="growth fade-in">
-          <div class="growth__side growth__side--before">
-            <p class="growth__label">Midterm</p>
-            <ul class="growth__list">
-              <li>Basic understanding of classes and objects</li>
-              <li>Simple programs with minimal structure</li>
-              <li>Limited use of OOP principles</li>
-              <li>Brief, surface-level reflections</li>
-              <li>Code lacked proper documentation</li>
-            </ul>
-          </div>
-          <div class="growth__side growth__side--after">
-            <p class="growth__label">Final</p>
-            <ul class="growth__list">
-              <li>Confident use of all four OOP pillars</li>
-              <li>Well-structured programs with clear design</li>
-              <li>Applied interfaces, abstract classes, polymorphism</li>
-              <li>Deep, structured, meaningful reflections</li>
-              <li>Clean code with comments and proper naming</li>
-            </ul>
-          </div>
+        <div class="empty-state empty-state--wide fade-in">
+          <div class="empty-state__icon">G</div>
+          <h3 class="empty-state__title">Growth Comparison Incoming</h3>
+          <p class="empty-state__text">
+            A side-by-side comparison of skills and understanding from the Midterm to the Final  
+            period will be showcased here once both periods are complete.
+          </p>
         </div>
       </div>
     </section>
@@ -88,88 +74,13 @@
           <h2 class="section-title fade-in">Quizzes</h2>
           <p class="section-subtitle fade-in">Advanced OOP theory — interfaces, abstract classes, polymorphism.</p>
 
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Quiz 3</div>
-                <div class="card__title">Inheritance &amp; Polymorphism</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">1.</span> What is the difference between an abstract class and an interface?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">An abstract class can have both abstract and concrete methods, instance variables, and constructors. Supports single inheritance. An interface defines a contract — supports multiple implementation and (since Java 8) default/static methods.</p>
-                  </div>
-                  <p class="qa__explanation">Use abstract classes when classes share common state (e.g., <code>Animal</code> with <code>name</code>). Use interfaces when unrelated classes share a capability (e.g., <code>Printable</code>). "Is-a" vs. "can-do."</p>
-                </div>
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">2.</span> What is runtime polymorphism?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">The JVM determines which method to call based on the actual object type at runtime, not the reference type. Achieved through method overriding and inheritance.</p>
-                  </div>
-                  <p class="qa__explanation"><code>Shape s = new Circle(); s.area();</code> — the JVM calls <code>Circle</code>'s <code>area()</code> because the actual object is a <code>Circle</code>, even though <code>s</code> is declared as <code>Shape</code>.</p>
-                </div>
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">3.</span> Can a class implement multiple interfaces?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">Yes. <code>class Dog implements Animal, Pet { }</code>. However, Java does not support multiple class inheritance — only one superclass allowed.</p>
-                  </div>
-                  <p class="qa__explanation">This avoids the "diamond problem." Interfaces allow a class to fulfill multiple contracts without inheriting conflicting implementations.</p>
-                </div>
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">4.</span> What is the purpose of <code>@Override</code>?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">Tells the compiler the method is intended to override a superclass method. If it doesn't actually override anything, the compiler produces an error.</p>
-                  </div>
-                  <p class="qa__explanation">Without <code>@Override</code>, a typo like <code>tostring()</code> instead of <code>toString()</code> would silently create a new method. The annotation catches this at compile time.</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Quiz 4</div>
-                <div class="card__title">Abstraction &amp; Interfaces</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">1.</span> What is abstraction and how does it simplify programming?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">Abstraction hides implementation details and exposes only essential features. It lets developers work with high-level concepts without worrying about internals.</p>
-                  </div>
-                  <p class="qa__explanation">Like driving a car — you interact with the steering wheel (interface), not the engine (implementation). Abstract classes and interfaces define what's available without dictating how.</p>
-                </div>
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">2.</span> What are default methods in interfaces?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">Methods in an interface with a body. Allow adding new methods without breaking existing implementations. Declared with the <code>default</code> keyword (Java 8+).</p>
-                  </div>
-                  <p class="qa__explanation">Introduced to evolve interfaces over time. Implementing classes automatically get the method but can override it if needed.</p>
-                </div>
-
-              </div>
-            </div>
+          <div class="empty-state fade-in">
+            <div class="empty-state__icon">Q</div>
+            <h3 class="empty-state__title">Content Incoming</h3>
+            <p class="empty-state__text">
+              Final period quiz questions and answers covering advanced OOP topics like 
+              interfaces, abstract classes, and polymorphism will be added here.
+            </p>
           </div>
 
         </div><!-- /quizzes -->
@@ -181,112 +92,13 @@
           <h2 class="section-title fade-in">Seatwork</h2>
           <p class="section-subtitle fade-in">Advanced exercises — interface implementation and abstract hierarchies.</p>
 
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Seatwork 3</div>
-                <div class="card__title">Interface Implementation</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">1.</span> Create a <code>Payable</code> interface. Implement it in <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code>.</p>
-
-                  <div class="code-block">
-                    <div class="code-block__header">
-                      <span class="code-block__filename">PayableDemo.java</span>
-                      <button class="code-block__copy">Copy</button>
-                    </div>
-                    <div class="code-block__body">
-<pre><span class="kw">interface</span> <span class="typ">Payable</span> {
-    <span class="kw">double</span> <span class="fn">calculatePay</span>();
-    <span class="typ">String</span> <span class="fn">getEmployeeInfo</span>();
-}
-
-<span class="kw">class</span> <span class="typ">FullTimeEmployee</span> <span class="kw">implements</span> <span class="typ">Payable</span> {
-    <span class="kw">private</span> <span class="typ">String</span> name;
-    <span class="kw">private double</span> monthlySalary;
-
-    <span class="kw">public</span> <span class="fn">FullTimeEmployee</span>(<span class="typ">String</span> name, <span class="kw">double</span> salary) {
-        <span class="kw">this</span>.name = name;
-        <span class="kw">this</span>.monthlySalary = salary;
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculatePay</span>() { <span class="kw">return</span> monthlySalary; }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getEmployeeInfo</span>() { <span class="kw">return</span> name + <span class="str">" [Full-Time]"</span>; }
-}
-
-<span class="kw">class</span> <span class="typ">PartTimeEmployee</span> <span class="kw">implements</span> <span class="typ">Payable</span> {
-    <span class="kw">private</span> <span class="typ">String</span> name;
-    <span class="kw">private double</span> hourlyRate;
-    <span class="kw">private int</span> hoursWorked;
-
-    <span class="kw">public</span> <span class="fn">PartTimeEmployee</span>(<span class="typ">String</span> name, <span class="kw">double</span> rate, <span class="kw">int</span> hours) {
-        <span class="kw">this</span>.name = name;
-        <span class="kw">this</span>.hourlyRate = rate;
-        <span class="kw">this</span>.hoursWorked = hours;
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculatePay</span>() { <span class="kw">return</span> hourlyRate * hoursWorked; }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getEmployeeInfo</span>() { <span class="kw">return</span> name + <span class="str">" [Part-Time]"</span>; }
-}
-
-<span class="kw">public class</span> <span class="typ">PayableDemo</span> {
-    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
-        <span class="typ">Payable</span>[] employees = {
-            <span class="kw">new</span> <span class="typ">FullTimeEmployee</span>(<span class="str">"Alice"</span>, <span class="num">45000</span>),
-            <span class="kw">new</span> <span class="typ">PartTimeEmployee</span>(<span class="str">"Bob"</span>, <span class="num">250</span>, <span class="num">80</span>)
-        };
-        <span class="kw">for</span> (<span class="typ">Payable</span> emp : employees)
-            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"%s — Pay: P%.2f%n"</span>,
-                emp.<span class="fn">getEmployeeInfo</span>(), emp.<span class="fn">calculatePay</span>());
-    }
-}</pre>
-                    </div>
-                  </div>
-
-                  <div class="output">
-                    <div class="output__header">Output</div>
-                    <div class="output__body">Alice [Full-Time] — Pay: P45000.00
-Bob [Part-Time] — Pay: P20000.00</div>
-                  </div>
-
-                  <p class="qa__explanation">The <code>Payable</code> interface defines a contract. Both employee types implement it differently, but are processed uniformly through the interface reference — interface-based polymorphism.</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Seatwork 4</div>
-                <div class="card__title">Abstract Class Hierarchies</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">1.</span> When would you choose an abstract class over an interface?</p>
-                  <div class="qa__answer">
-                    <p class="qa__answer-label">Answer</p>
-                    <p class="qa__answer-text">Choose an abstract class when related classes share common state (fields) and behavior (concrete methods), but need to enforce certain methods. Use an interface when unrelated classes share a capability.</p>
-                  </div>
-                  <p class="qa__explanation"><code>abstract class Vehicle</code> with shared fields (<code>speed</code>, <code>fuel</code>) and methods (<code>startEngine()</code>) — all vehicles share these. But <code>interface GPS</code> can be implemented by vehicles, phones, and watches — unrelated classes sharing a capability.</p>
-                </div>
-              </div>
-            </div>
+          <div class="empty-state fade-in">
+            <div class="empty-state__icon">S</div>
+            <h3 class="empty-state__title">Content Incoming</h3>
+            <p class="empty-state__text">
+              Seatwork exercises covering interface implementation, abstract class hierarchies, 
+              and advanced OOP patterns will be posted here.
+            </p>
           </div>
 
         </div><!-- /seatwork -->
@@ -298,285 +110,13 @@ Bob [Part-Time] — Pay: P20000.00</div>
           <h2 class="section-title fade-in">Programming Activities</h2>
           <p class="section-subtitle fade-in">Advanced Java programs applying all four OOP pillars.</p>
 
-          <!-- Banking System -->
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Activity 4</div>
-                <div class="card__title">Banking System</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-
-                <div class="code-block">
-                  <div class="code-block__header">
-                    <span class="code-block__filename">BankingSystem.java</span>
-                    <button class="code-block__copy">Copy</button>
-                  </div>
-                  <div class="code-block__body">
-<pre><span class="kw">abstract class</span> <span class="typ">BankAccount</span> {
-    <span class="kw">protected</span> <span class="typ">String</span> owner;
-    <span class="kw">protected double</span> balance;
-    <span class="kw">protected</span> <span class="typ">String</span> accountNumber;
-
-    <span class="kw">public</span> <span class="fn">BankAccount</span>(<span class="typ">String</span> owner, <span class="typ">String</span> accNum, <span class="kw">double</span> initial) {
-        <span class="kw">this</span>.owner = owner;
-        <span class="kw">this</span>.accountNumber = accNum;
-        <span class="kw">this</span>.balance = initial;
-    }
-
-    <span class="kw">public void</span> <span class="fn">deposit</span>(<span class="kw">double</span> amount) {
-        <span class="kw">if</span> (amount > <span class="num">0</span>) {
-            balance += amount;
-            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"  + Deposited P%.2f%n"</span>, amount);
-        }
-    }
-
-    <span class="kw">public abstract void</span> <span class="fn">withdraw</span>(<span class="kw">double</span> amount);
-    <span class="kw">public abstract double</span> <span class="fn">calculateInterest</span>();
-
-    <span class="kw">public void</span> <span class="fn">displayInfo</span>() {
-        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Account: "</span> + accountNumber);
-        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Owner:   "</span> + owner);
-        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Balance: P%.2f%n"</span>, balance);
-        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Interest: P%.2f%n"</span>, <span class="fn">calculateInterest</span>());
-    }
-}
-
-<span class="kw">class</span> <span class="typ">SavingsAccount</span> <span class="kw">extends</span> <span class="typ">BankAccount</span> {
-    <span class="kw">private static final double</span> RATE = <span class="num">0.02</span>;
-
-    <span class="kw">public</span> <span class="fn">SavingsAccount</span>(<span class="typ">String</span> owner, <span class="typ">String</span> accNum, <span class="kw">double</span> initial) {
-        <span class="kw">super</span>(owner, accNum, initial);
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public void</span> <span class="fn">withdraw</span>(<span class="kw">double</span> amount) {
-        <span class="kw">if</span> (amount > <span class="num">0</span> && amount <= balance) {
-            balance -= amount;
-            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"  - Withdrawn P%.2f%n"</span>, amount);
-        } <span class="kw">else</span> {
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  x Insufficient funds."</span>);
-        }
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculateInterest</span>() { <span class="kw">return</span> balance * RATE; }
-}
-
-<span class="kw">class</span> <span class="typ">CheckingAccount</span> <span class="kw">extends</span> <span class="typ">BankAccount</span> {
-    <span class="kw">private static final double</span> RATE = <span class="num">0.005</span>;
-    <span class="kw">private static final double</span> OVERDRAFT = <span class="num">5000</span>;
-
-    <span class="kw">public</span> <span class="fn">CheckingAccount</span>(<span class="typ">String</span> owner, <span class="typ">String</span> accNum, <span class="kw">double</span> initial) {
-        <span class="kw">super</span>(owner, accNum, initial);
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public void</span> <span class="fn">withdraw</span>(<span class="kw">double</span> amount) {
-        <span class="kw">if</span> (amount > <span class="num">0</span> && (balance - amount) >= -OVERDRAFT) {
-            balance -= amount;
-            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"  - Withdrawn P%.2f%n"</span>, amount);
-        } <span class="kw">else</span> {
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  x Exceeds overdraft limit."</span>);
-        }
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculateInterest</span>() {
-        <span class="kw">return</span> balance > <span class="num">0</span> ? balance * RATE : <span class="num">0</span>;
-    }
-}
-
-<span class="kw">public class</span> <span class="typ">BankingSystem</span> {
-    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
-        <span class="typ">BankAccount</span>[] accounts = {
-            <span class="kw">new</span> <span class="typ">SavingsAccount</span>(<span class="str">"Jayvee"</span>, <span class="str">"SA-001"</span>, <span class="num">20000</span>),
-            <span class="kw">new</span> <span class="typ">CheckingAccount</span>(<span class="str">"Maria"</span>, <span class="str">"CA-001"</span>, <span class="num">15000</span>)
-        };
-
-        <span class="kw">for</span> (<span class="typ">BankAccount</span> acc : accounts) {
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"\n--- Account Details ---"</span>);
-            acc.<span class="fn">deposit</span>(<span class="num">5000</span>);
-            acc.<span class="fn">withdraw</span>(<span class="num">3000</span>);
-            acc.<span class="fn">displayInfo</span>();
-        }
-    }
-}</pre>
-                  </div>
-                </div>
-
-                <div class="output">
-                  <div class="output__header">Output</div>
-                  <div class="output__body">
---- Account Details ---
-  + Deposited P5000.00
-  - Withdrawn P3000.00
-Account: SA-001
-Owner:   Jayvee
-Balance: P22000.00
-Interest: P440.00
-
---- Account Details ---
-  + Deposited P5000.00
-  - Withdrawn P3000.00
-Account: CA-001
-Owner:   Maria
-Balance: P17000.00
-Interest: P85.00</div>
-                </div>
-
-                <div class="explanation">
-                  <div class="explanation__title">Logic</div>
-                  <div class="explanation__text">
-                    All four OOP pillars working together:
-                    <ul>
-                      <li><strong>Abstraction</strong> — <code>BankAccount</code> is abstract; <code>withdraw()</code> and <code>calculateInterest()</code> are abstract.</li>
-                      <li><strong>Encapsulation</strong> — Fields are <code>protected</code>. Rules enforced within methods.</li>
-                      <li><strong>Inheritance</strong> — Both accounts extend <code>BankAccount</code>, reusing <code>deposit()</code> and <code>displayInfo()</code>.</li>
-                      <li><strong>Polymorphism</strong> — <code>BankAccount[]</code> array processes both types uniformly at runtime.</li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Library System -->
-          <div class="card fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Activity 5</div>
-                <div class="card__title">Library Management System</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body">
-              <div class="card__content">
-
-                <div class="code-block">
-                  <div class="code-block__header">
-                    <span class="code-block__filename">LibrarySystem.java</span>
-                    <button class="code-block__copy">Copy</button>
-                  </div>
-                  <div class="code-block__body">
-<pre><span class="kw">import</span> java.util.ArrayList;
-
-<span class="kw">interface</span> <span class="typ">Borrowable</span> {
-    <span class="kw">void</span> <span class="fn">borrowItem</span>();
-    <span class="kw">void</span> <span class="fn">returnItem</span>();
-    <span class="kw">boolean</span> <span class="fn">isAvailable</span>();
-}
-
-<span class="kw">class</span> <span class="typ">Book</span> <span class="kw">implements</span> <span class="typ">Borrowable</span> {
-    <span class="kw">private</span> <span class="typ">String</span> title, author;
-    <span class="kw">private boolean</span> available;
-
-    <span class="kw">public</span> <span class="fn">Book</span>(<span class="typ">String</span> title, <span class="typ">String</span> author) {
-        <span class="kw">this</span>.title = title;
-        <span class="kw">this</span>.author = author;
-        <span class="kw">this</span>.available = <span class="kw">true</span>;
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public void</span> <span class="fn">borrowItem</span>() {
-        <span class="kw">if</span> (available) {
-            available = <span class="kw">false</span>;
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  Borrowed: "</span> + title);
-        } <span class="kw">else</span> {
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  '"</span> + title + <span class="str">"' is not available."</span>);
-        }
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public void</span> <span class="fn">returnItem</span>() {
-        available = <span class="kw">true</span>;
-        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  Returned: "</span> + title);
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public boolean</span> <span class="fn">isAvailable</span>() { <span class="kw">return</span> available; }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">toString</span>() {
-        <span class="kw">return</span> <span class="typ">String</span>.<span class="fn">format</span>(<span class="str">"%-28s by %-18s [%s]"</span>,
-            title, author, available ? <span class="str">"Available"</span> : <span class="str">"Borrowed"</span>);
-    }
-}
-
-<span class="kw">class</span> <span class="typ">Library</span> {
-    <span class="kw">private</span> <span class="typ">ArrayList</span>&lt;<span class="typ">Book</span>&gt; catalog = <span class="kw">new</span> <span class="typ">ArrayList</span>&lt;&gt;();
-
-    <span class="kw">public void</span> <span class="fn">addBook</span>(<span class="typ">Book</span> b) { catalog.<span class="fn">add</span>(b); }
-
-    <span class="kw">public void</span> <span class="fn">showCatalog</span>() {
-        <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"\n=== Library Catalog ==="</span>);
-        <span class="kw">for</span> (<span class="typ">Book</span> b : catalog)
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"  "</span> + b);
-    }
-}
-
-<span class="kw">public class</span> <span class="typ">LibrarySystem</span> {
-    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
-        <span class="typ">Library</span> lib = <span class="kw">new</span> <span class="typ">Library</span>();
-        <span class="typ">Book</span> b1 = <span class="kw">new</span> <span class="typ">Book</span>(<span class="str">"Clean Code"</span>, <span class="str">"Robert C. Martin"</span>);
-        <span class="typ">Book</span> b2 = <span class="kw">new</span> <span class="typ">Book</span>(<span class="str">"Head First Java"</span>, <span class="str">"Kathy Sierra"</span>);
-        <span class="typ">Book</span> b3 = <span class="kw">new</span> <span class="typ">Book</span>(<span class="str">"Effective Java"</span>, <span class="str">"Joshua Bloch"</span>);
-
-        lib.<span class="fn">addBook</span>(b1); lib.<span class="fn">addBook</span>(b2); lib.<span class="fn">addBook</span>(b3);
-        lib.<span class="fn">showCatalog</span>();
-
-        b1.<span class="fn">borrowItem</span>();
-        b2.<span class="fn">borrowItem</span>();
-        b1.<span class="fn">borrowItem</span>(); <span class="cmt">// should fail</span>
-        lib.<span class="fn">showCatalog</span>();
-
-        b1.<span class="fn">returnItem</span>();
-        lib.<span class="fn">showCatalog</span>();
-    }
-}</pre>
-                  </div>
-                </div>
-
-                <div class="output">
-                  <div class="output__header">Output</div>
-                  <div class="output__body">=== Library Catalog ===
-  Clean Code                 by Robert C. Martin   [Available]
-  Head First Java            by Kathy Sierra        [Available]
-  Effective Java             by Joshua Bloch        [Available]
-  Borrowed: Clean Code
-  Borrowed: Head First Java
-  'Clean Code' is not available.
-
-=== Library Catalog ===
-  Clean Code                 by Robert C. Martin   [Borrowed]
-  Head First Java            by Kathy Sierra        [Borrowed]
-  Effective Java             by Joshua Bloch        [Available]
-  Returned: Clean Code
-
-=== Library Catalog ===
-  Clean Code                 by Robert C. Martin   [Available]
-  Head First Java            by Kathy Sierra        [Borrowed]
-  Effective Java             by Joshua Bloch        [Available]</div>
-                </div>
-
-                <div class="explanation">
-                  <div class="explanation__title">Key Learnings</div>
-                  <div class="explanation__text">
-                    <ul>
-                      <li><strong>Interface as contract</strong> — <code>Borrowable</code> defines capabilities without implementation details.</li>
-                      <li><strong>State management</strong> — <code>available</code> flag enforces business rules.</li>
-                      <li><strong>ArrayList over arrays</strong> — Dynamic collection management.</li>
-                      <li><strong>toString() override</strong> — Clean, formatted object output.</li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <div class="empty-state fade-in">
+            <div class="empty-state__icon">A</div>
+            <h3 class="empty-state__title">Content Incoming</h3>
+            <p class="empty-state__text">
+              Advanced Java programming projects demonstrating all four OOP pillars will be 
+              showcased here — including source code, outputs, and detailed explanations.
+            </p>
           </div>
 
         </div><!-- /activities -->
@@ -588,143 +128,13 @@ Interest: P85.00</div>
           <h2 class="section-title fade-in">Final Examination</h2>
           <p class="section-subtitle fade-in">Comprehensive assessment with a deep personal reflection.</p>
 
-          <div class="card expanded fade-in">
-            <div class="card__header">
-              <div class="card__header-text">
-                <div class="card__label">Final Exam</div>
-                <div class="card__title">Advanced OOP Concepts</div>
-              </div>
-              <span class="card__chevron">&#9662;</span>
-            </div>
-            <div class="card__body" style="max-height: 8000px;">
-              <div class="card__content">
-
-                <div class="qa">
-                  <p class="qa__question"><span class="qa__question-num">1.</span> Design a class hierarchy for a vehicle rental system with an interface, abstract class, and two concrete classes.</p>
-
-                  <div class="code-block">
-                    <div class="code-block__header">
-                      <span class="code-block__filename">VehicleRental.java</span>
-                      <button class="code-block__copy">Copy</button>
-                    </div>
-                    <div class="code-block__body">
-<pre><span class="kw">interface</span> <span class="typ">Rentable</span> {
-    <span class="kw">double</span> <span class="fn">calculateRentalCost</span>(<span class="kw">int</span> days);
-    <span class="typ">String</span> <span class="fn">getRentalTerms</span>();
-}
-
-<span class="kw">abstract class</span> <span class="typ">Vehicle</span> <span class="kw">implements</span> <span class="typ">Rentable</span> {
-    <span class="kw">protected</span> <span class="typ">String</span> make, model;
-    <span class="kw">protected int</span> year;
-    <span class="kw">protected double</span> dailyRate;
-
-    <span class="kw">public</span> <span class="fn">Vehicle</span>(<span class="typ">String</span> make, <span class="typ">String</span> model, <span class="kw">int</span> year, <span class="kw">double</span> rate) {
-        <span class="kw">this</span>.make = make;
-        <span class="kw">this</span>.model = model;
-        <span class="kw">this</span>.year = year;
-        <span class="kw">this</span>.dailyRate = rate;
-    }
-
-    <span class="kw">public void</span> <span class="fn">displayInfo</span>() {
-        <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"%d %s %s — P%.0f/day%n"</span>, year, make, model, dailyRate);
-    }
-}
-
-<span class="kw">class</span> <span class="typ">Car</span> <span class="kw">extends</span> <span class="typ">Vehicle</span> {
-    <span class="kw">public</span> <span class="fn">Car</span>(<span class="typ">String</span> make, <span class="typ">String</span> model, <span class="kw">int</span> year, <span class="kw">double</span> rate) {
-        <span class="kw">super</span>(make, model, year, rate);
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculateRentalCost</span>(<span class="kw">int</span> days) {
-        <span class="kw">return</span> days >= <span class="num">7</span> ? dailyRate * days * <span class="num">0.9</span> : dailyRate * days;
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getRentalTerms</span>() {
-        <span class="kw">return</span> <span class="str">"Standard rental. 10% discount for 7+ days."</span>;
-    }
-}
-
-<span class="kw">class</span> <span class="typ">SUV</span> <span class="kw">extends</span> <span class="typ">Vehicle</span> {
-    <span class="kw">private static final double</span> INSURANCE = <span class="num">500</span>;
-
-    <span class="kw">public</span> <span class="fn">SUV</span>(<span class="typ">String</span> make, <span class="typ">String</span> model, <span class="kw">int</span> year, <span class="kw">double</span> rate) {
-        <span class="kw">super</span>(make, model, year, rate);
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public double</span> <span class="fn">calculateRentalCost</span>(<span class="kw">int</span> days) {
-        <span class="kw">return</span> (dailyRate * days) + INSURANCE;
-    }
-
-    <span class="ann">@Override</span>
-    <span class="kw">public</span> <span class="typ">String</span> <span class="fn">getRentalTerms</span>() {
-        <span class="kw">return</span> <span class="str">"Premium rental. Includes P500 insurance fee."</span>;
-    }
-}
-
-<span class="kw">public class</span> <span class="typ">VehicleRental</span> {
-    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
-        <span class="typ">Vehicle</span>[] fleet = {
-            <span class="kw">new</span> <span class="typ">Car</span>(<span class="str">"Toyota"</span>, <span class="str">"Vios"</span>, <span class="num">2024</span>, <span class="num">1500</span>),
-            <span class="kw">new</span> <span class="typ">SUV</span>(<span class="str">"Ford"</span>, <span class="str">"Everest"</span>, <span class="num">2024</span>, <span class="num">3500</span>)
-        };
-
-        <span class="kw">for</span> (<span class="typ">Vehicle</span> v : fleet) {
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"\n--- Rental Quote ---"</span>);
-            v.<span class="fn">displayInfo</span>();
-            <span class="typ">System</span>.out.<span class="fn">println</span>(<span class="str">"Terms: "</span> + v.<span class="fn">getRentalTerms</span>());
-            <span class="typ">System</span>.out.<span class="fn">printf</span>(<span class="str">"Cost for 10 days: P%.2f%n"</span>,
-                v.<span class="fn">calculateRentalCost</span>(<span class="num">10</span>));
-        }
-    }
-}</pre>
-                    </div>
-                  </div>
-
-                  <div class="output">
-                    <div class="output__header">Output</div>
-                    <div class="output__body">
---- Rental Quote ---
-2024 Toyota Vios — P1500/day
-Terms: Standard rental. 10% discount for 7+ days.
-Cost for 10 days: P13500.00
-
---- Rental Quote ---
-2024 Ford Everest — P3500/day
-Terms: Premium rental. Includes P500 insurance fee.
-Cost for 10 days: P35500.00</div>
-                  </div>
-                </div>
-
-                <!-- Final Reflection -->
-                <div class="reflection">
-                  <div class="reflection__title">Final Reflection</div>
-
-                  <div class="reflection__section">
-                    <p class="reflection__label">What I Learned</p>
-                    <p class="reflection__text">"The final period brought everything together. I moved from understanding individual OOP concepts to seeing how they work as a unified system. The Banking System activity was a breakthrough — building one program that uses abstraction, encapsulation, inheritance, and polymorphism simultaneously made me realize these aren't separate concepts but parts of one coherent design philosophy."</p>
-                  </div>
-
-                  <div class="reflection__section">
-                    <p class="reflection__label">Growth from Midterm</p>
-                    <p class="reflection__text">"Comparing my midterm ATM (a single class doing everything) with my final Banking System (abstract classes, subclasses, proper inheritance) shows real growth. My code became more modular, readable, and aligned with real software engineering practices. I started thinking about design before coding — drawing class diagrams first, identifying relationships."</p>
-                  </div>
-
-                  <div class="reflection__section">
-                    <p class="reflection__label">Challenges and Solutions</p>
-                    <p class="reflection__text">"The hardest part was knowing when to use an abstract class vs. an interface. I kept defaulting to abstract classes until I built the Library System, where the <code>Borrowable</code> interface made perfect sense — it represented a capability, not an identity. The 'is-a' vs. 'can-do' distinction finally clicked."</p>
-                  </div>
-
-                  <div class="reflection__section">
-                    <p class="reflection__label">Looking Forward</p>
-                    <p class="reflection__text">"This course gave me a strong foundation for Data Structures, Software Engineering, and real-world development. I want to explore design patterns more deeply and start applying OOP in larger, multi-file projects. The journey from novice to confident OOP programmer has been challenging but deeply rewarding."</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <div class="empty-state fade-in">
+            <div class="empty-state__icon">E</div>
+            <h3 class="empty-state__title">Content Incoming</h3>
+            <p class="empty-state__text">
+              The final exam questions, solutions, and a comprehensive reflection on the 
+              entire OOP journey will be added here after completion.
+            </p>
           </div>
 
         </div><!-- /exam -->
