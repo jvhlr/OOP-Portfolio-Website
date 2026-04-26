@@ -70,6 +70,69 @@
             Theoretical assessments covering OOP fundamentals.
           </p>
 
+          <!-- Quiz #1 -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <p class="card__label" style="display: flex; align-items: center; gap: 6px;">
+                  N/A <span style="color: var(--border); font-size: 10px;">&bull;</span>
+                  <span
+                    style="color: #8edba1; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; background: rgba(142, 219, 161, 0.1); border-radius: 4px;">Passed</span>
+                </p>
+                <h3 class="card__title">Quiz #1</h3>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: var(--sp-4);">
+                <span
+                  style="font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Score</span>
+                <div style="font-family: var(--font-mono); font-weight: 700; line-height: 1;">
+                  <span style="font-size: var(--text-lg); color: #8edba1;">21</span><span
+                    style="font-size: var(--text-sm); color: var(--text-muted);">/30</span>
+                </div>
+              </div>
+
+              <span class="card__chevron">▼</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+                <div class="qa">
+                  <p class="qa__answer-label">Reflection</p>
+                  <div class="explanation">
+                    <p class="qa__answer-text text-justify-desktop">
+                      Quiz 1 acted as an early check on basic Java terms and rules. At first, JVM, JRE, and JDK appeared
+                      as names to recall — not ideas to grasp. But writing real programs, then fixing errors, made the
+                      differences useful.
+                      <br><br>
+                      Consider the JVM. It powers Java's "write once, run anywhere" feature. That one fact shows why the
+                      compile step exists at all.
+                      <br><br>
+                      Memory concepts proved hardest. But three mental images helped.
+                      <br>
+                      <strong>The Stack</strong> holds temporary data. A method ends? Stack clears it.
+                      <br>
+                      <strong>The Heap</strong> keeps objects longer. They stay until no longer needed.
+                      <br>
+                      <strong>The Method Area</strong> stores blueprints — class definitions.
+                      <br>
+                      Seeing these as separate containers made variable placement logical.
+                      <br><br>
+                      Operators taught a small but critical lesson. Prefix versus postfix increment? Swap them and
+                      output changes completely.
+                      <br><br>
+                      Short-circuit evaluation matters outside quizzes too. With &&, if the left side is false, the
+                      right side never runs. That behavior prevents errors like NullPointerException — a tool, not just
+                      a test point.
+                      <br><br>
+                      A common beginner error the quiz reinforced: assignment uses one equals sign (=); comparison uses
+                      two (==). Seeing both on the same test locked the difference permanently. Without this quiz's
+                      groundwork, later OOP topics would have been far harder to build on.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Quiz #2 -->
           <div class="card fade-in">
             <div class="card__header">
@@ -1340,8 +1403,65 @@
           <div class="card fade-in">
             <div class="card__header">
               <div class="card__header-text">
-                <p class="card__label">Midterm Assignment #1</p>
+                <p class="card__label" style="display: flex; align-items: center; gap: 6px;">
+                  Assignment #1 <span style="color: var(--border); font-size: 10px;">&bull;</span>
+                  <span
+                    style="color: #8edba1; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; background: rgba(142, 219, 161, 0.1); border-radius: 4px;">Passed</span>
+                </p>
+                <h3 class="card__title">All About me</h3>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: var(--sp-4);">
+                <span
+                  style="font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Score</span>
+                <div style="font-family: var(--font-mono); font-weight: 700; line-height: 1;">
+                  <span style="font-size: var(--text-lg); color: #8edba1;">30</span><span
+                    style="font-size: var(--text-sm); color: var(--text-muted);">/30</span>
+                </div>
+              </div>
+              <span class="card__chevron">▼</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+                <div class="qa">
+                  <p class="qa__answer-label">All About Me</p>
+                  <div
+                    style="display: flex; justify-content: center; gap: var(--sp-4); overflow-x: auto; padding-bottom: var(--sp-4);">
+                    <img src="img/activity1-about-me.png" alt="Midterm Assignment 1: All About Me"
+                      class="previewable-image"
+                      style="max-height: 600px; border-radius: var(--radius); border: 1px solid var(--border); object-fit: contain; cursor: pointer; transition: opacity 0.2s;"
+                      onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+                  </div>
+                </div>
+                <div class="qa" style="margin-top: var(--sp-6);">
+                  <p class="qa__answer-label">Reflection</p>
+                  <div class="explanation">
+                    <p class="qa__answer-text text-justify-desktop">
+                      Just a few things about myself
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assignment #2 -->
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <p class="card__label" style="display: flex; align-items: center; gap: 6px;">
+                  Assignment #2 <span style="color: var(--border); font-size: 10px;">&bull;</span>
+                  <span
+                    style="color: #8edba1; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; background: rgba(142, 219, 161, 0.1); border-radius: 4px;">Passed</span>
+                </p>
                 <h3 class="card__title">Introduction to Java</h3>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: var(--sp-4);">
+                <span
+                  style="font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Score</span>
+                <div style="font-family: var(--font-mono); font-weight: 700; line-height: 1;">
+                  <span style="font-size: var(--text-lg); color: #8edba1;">30</span><span
+                    style="font-size: var(--text-sm); color: var(--text-muted);">/30</span>
+                </div>
               </div>
               <span class="card__chevron">▼</span>
             </div>
@@ -1351,7 +1471,6 @@
                 <div class="qa">
                   <p class="qa__answer-label">Handwritten Output</p>
                   <div style="display: flex; gap: var(--sp-4); overflow-x: auto; padding-bottom: var(--sp-4);">
-                    <!-- Replace the src attributes with the actual paths to your images once you save them in the project -->
                     <img src="img/intro-to-java-1.jpg" alt="Introduction to Java - Page 1" class="previewable-image"
                       style="max-height: 600px; border-radius: var(--radius); border: 1px solid var(--border); object-fit: contain; cursor: pointer; transition: opacity 0.2s;"
                       onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
@@ -1359,15 +1478,12 @@
                       style="max-height: 600px; border-radius: var(--radius); border: 1px solid var(--border); object-fit: contain; cursor: pointer; transition: opacity 0.2s;"
                       onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
                   </div>
-                  <p class="qa__explanation" style="margin-top: var(--sp-2);">
-
-                  </p>
                 </div>
 
-                <div class="qa">
+                <div class="qa" style="margin-top: var(--sp-6);">
                   <p class="qa__answer-label">Reflection</p>
                   <div class="explanation">
-                    <p class="qa__answer-text text-justify-desktop" style="margin-bottom: var(--sp-3);">
+                    <p class="qa__answer-text text-justify-desktop">
                       This activity, in a way reshaped how I look at programming not just as writing lines of code but
                       as something happening deeper, almost behind the curtain. The contrast between compiled and
                       interpreted languages stood out immediately one chasing speed, the other leaning into
@@ -1384,7 +1500,6 @@
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -1437,7 +1552,13 @@
                   <p class="qa__answer-label">How it works</p>
                   <div class="explanation">
                     <p class="qa__answer-text text-justify-desktop">
-                      This assignment explores how variables store data differently depending on type. Primitive variables (like salary) hold actual values in stack memory, whereas reference variables (e1, e2, e3) store pointers to objects on the heap. When creating new Employee objects, memory gets allocated; reassigning references orphans old objects for garbage collection. Modifying an object's properties through one reference affects all references pointing to that same instance, but reassigning a reference doesn't impact others—it simply redirects that variable to a different heap location.
+                      This assignment explores how variables store data differently depending on type. Primitive
+                      variables (like salary) hold actual values in stack memory, whereas reference variables (e1, e2,
+                      e3) store pointers to objects on the heap. When creating new Employee objects, memory gets
+                      allocated; reassigning references orphans old objects for garbage collection. Modifying an
+                      object's properties through one reference affects all references pointing to that same instance,
+                      but reassigning a reference doesn't impact others—it simply redirects that variable to a different
+                      heap location.
                     </p>
                   </div>
                 </div>
@@ -1664,7 +1785,12 @@
                   <p class="qa__answer-label">How it works</p>
                   <div class="explanation">
                     <p class="qa__answer-text text-justify-desktop">
-                      This activity is about using operators in Java programs, but not just in theory, it connects them to simple real life examples too. It shows how the right operator is chosen depending on the problem, based on what was discussed in the lesson. There is also some focus on how variables are used and how operators are applied correctly, while still following proper Java syntax, indentation, and naming rules. At the same time, it makes sure that the output produced actually matches what each problem is asking for.
+                      This activity is about using operators in Java programs, but not just in theory, it connects them
+                      to simple real life examples too. It shows how the right operator is chosen depending on the
+                      problem, based on what was discussed in the lesson. There is also some focus on how variables are
+                      used and how operators are applied correctly, while still following proper Java syntax,
+                      indentation, and naming rules. At the same time, it makes sure that the output produced actually
+                      matches what each problem is asking for.
                     </p>
                   </div>
                 </div>
@@ -1871,7 +1997,17 @@ public class BasicATMSystemHilario {
                   <p class="qa__answer-label">How it works</p>
                   <div class="explanation">
                     <p class="qa__answer-text text-justify-desktop">
-                      This program simulates a basic ATM system in Java where a user starts with a balance of 5000 pesos and interacts through a looped menu. It uses a Scanner to take input, then a switch statement to handle each option like checking the current balance, adding money through deposit, or removing money through withdrawal. When depositing, the program checks if the entered amount is greater than zero before adding it to the balance, otherwise it rejects it. For withdrawals, it goes through several conditions first, it blocks any amount above 2000 pesos per transaction, then checks if the balance is enough, and also makes sure the amount is not zero or negative before subtracting it. Each action updates the balance accordingly and prints a message that matches the result of the operation. The loop continues running until the user selects the exit option, and throughout the program, proper Java syntax, variable usage, and control structures are followed to keep everything working as expected.
+                      This program simulates a basic ATM system in Java where a user starts with a balance of 5000 pesos
+                      and interacts through a looped menu. It uses a Scanner to take input, then a switch statement to
+                      handle each option like checking the current balance, adding money through deposit, or removing
+                      money through withdrawal. When depositing, the program checks if the entered amount is greater
+                      than zero before adding it to the balance, otherwise it rejects it. For withdrawals, it goes
+                      through several conditions first, it blocks any amount above 2000 pesos per transaction, then
+                      checks if the balance is enough, and also makes sure the amount is not zero or negative before
+                      subtracting it. Each action updates the balance accordingly and prints a message that matches the
+                      result of the operation. The loop continues running until the user selects the exit option, and
+                      throughout the program, proper Java syntax, variable usage, and control structures are followed to
+                      keep everything working as expected.
                     </p>
                   </div>
                 </div>
@@ -2082,7 +2218,20 @@ public class EnrollmentAssessmentSystemHilario {
                   <p class="qa__answer-label">How it works</p>
                   <div class="explanation">
                     <p class="qa__answer-text text-justify-desktop">
-                      This program works as a simple enrollment checker in Java where it gathers student details first, then slowly decides the result based on a set of conditions. It begins by asking for the student’s name, then moves to the strand, but it does not just accept anything right away, it keeps asking until the input matches one of the allowed choices like STEM, ABM, HUMSS, TVL, or Others. After that, it collects the entrance exam and interview scores, then combines them into a final score using a fixed percentage, 60 for the exam and 40 for the interview. There is also a screening result, and this part kind of controls everything, because if the student fails it, the program already marks them as not qualified no matter how high the score is. If they pass, the program checks the final score in ranges, deciding if the student gets a scholarship, is simply admitted, placed on waiting, or not accepted at all. At the same time, it assigns a suggested course using a switch case, where each strand leads to a certain program, while anything outside defaults to a general one. In the end, it prints out a full result showing the name, strand, computed score, admission status, and the recommended program, with the flow held together by loops, conditions, and basic Java structure that keeps everything in line.
+                      This program works as a simple enrollment checker in Java where it gathers student details first,
+                      then slowly decides the result based on a set of conditions. It begins by asking for the student’s
+                      name, then moves to the strand, but it does not just accept anything right away, it keeps asking
+                      until the input matches one of the allowed choices like STEM, ABM, HUMSS, TVL, or Others. After
+                      that, it collects the entrance exam and interview scores, then combines them into a final score
+                      using a fixed percentage, 60 for the exam and 40 for the interview. There is also a screening
+                      result, and this part kind of controls everything, because if the student fails it, the program
+                      already marks them as not qualified no matter how high the score is. If they pass, the program
+                      checks the final score in ranges, deciding if the student gets a scholarship, is simply admitted,
+                      placed on waiting, or not accepted at all. At the same time, it assigns a suggested course using a
+                      switch case, where each strand leads to a certain program, while anything outside defaults to a
+                      general one. In the end, it prints out a full result showing the name, strand, computed score,
+                      admission status, and the recommended program, with the flow held together by loops, conditions,
+                      and basic Java structure that keeps everything in line.
                     </p>
                   </div>
                 </div>
@@ -2276,8 +2425,17 @@ public class ExpenseTrackerHilario {
                 <div class="qa" style="margin-top: var(--sp-6);">
                   <p class="qa__answer-label">How it works</p>
                   <div class="explanation">
-                    <p class="qa__answer-text text-justify-desktop" style="color: var(--text-muted); font-style: italic;">
-                      Content incoming...
+                    <p class="qa__answer-text text-justify-desktop">
+                      This program is a simple expense tracker in Java and it is divided into several methods so each
+                      part has a clear job. One method just prints the title of the program, nothing complex, only a
+                      header display. Another method adds all the expenses like food, transportation, and other costs to
+                      get the total amount. There is also a method that compares the total spending with the budget,
+                      then decides if the user is over budget, exactly equal, or still within limit, and it returns a
+                      message based on that check. Another method handles the full output, showing all the expense
+                      details, the total, the budget, and the final status, while also computing how much money is left
+                      or exceeded and giving a message depending on the result. The main method only takes input and
+                      calls these methods one by one, keeping the whole program organized, easy to follow, and
+                      structured with proper Java syntax and method usage.
                     </p>
                   </div>
                 </div>
@@ -2307,13 +2465,56 @@ public class ExpenseTrackerHilario {
           <h2 class="section-title fade-in">Midterm Examination</h2>
           <p class="section-subtitle fade-in">Cumulative Assessment covering lessons 1 - 6</p>
 
-          <div class="empty-state fade-in">
-            <div class="empty-state__icon">E</div>
-            <h3 class="empty-state__title">Content Incoming</h3>
-            <p class="empty-state__text">
-              The midterm exam questions, solutions, and a personal reflection will be added here
-              after completion. This section will showcase understanding of OOP fundamentals.
-            </p>
+          <div class="card fade-in">
+            <div class="card__header">
+              <div class="card__header-text">
+                <p class="card__label" style="display: flex; align-items: center; gap: 6px;">
+                  Midterm Exam <span style="color: var(--border); font-size: 10px;">&bull;</span>
+                  <span
+                    style="color: var(--text-muted); font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">Pending
+                    Grade</span>
+                </p>
+                <h3 class="card__title">Theory & Problem Solving</h3>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: var(--sp-4);">
+                <span
+                  style="font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Score</span>
+                <div style="font-family: var(--font-mono); font-weight: 700; line-height: 1;">
+                  <span style="font-size: var(--text-lg); color: var(--text-muted);">TBD</span>
+                </div>
+              </div>
+              <span class="card__chevron">▼</span>
+            </div>
+            <div class="card__body">
+              <div class="card__content">
+                <div class="qa">
+                  <p class="qa__answer-label">Reflection</p>
+                  <div class="explanation">
+                    <p class="qa__answer-text text-justify-desktop">
+                      Before the exam? Total mess in my head. Kept saying, "No way I pass this." OOP felt like a wall.
+                      Early morning, first day of exams already drained me. So instead of reviewing hard? I rested.
+                      Barely touched the notes. Zero confidence walking in.
+                      <br><br>
+                      Then — papers land on the desk. Suddenly? Not so scared. Why? Because the little bits I did glance
+                      at? They showed up. Switch-case. Operators. Scanner. All that stuff from lesson one to six. Every
+                      single one.
+                      <br><br>
+                      Here’s what hit me: our professor wasn’t lying. His words? Not exact anymore. But the meaning
+                      stayed. "You already have what you need." And because of all those activities he made us do since
+                      day one? Things stuck. Without me even knowing.
+                      <br><br>
+                      So I answered. Not from last-minute cramming. From stock knowledge. From things I’d used before
+                      without thinking. Methods. Control flow. Variables. All connected somehow to the questions.
+                      <br><br>
+                      End of exam? Felt good. Maybe even a high score coming.
+                      <br><br>
+                      That test proved something small but big: the little efforts add up. You don’t always feel
+                      yourself learning. But you are. And honestly? I’ve learned way more than I thought.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div><!-- /exam -->
