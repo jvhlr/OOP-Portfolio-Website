@@ -1,0 +1,352 @@
+Question 1
+1 / 1 pts
+In a 2D array representing a table, does the first index represent the row while the second index represents the column?
+
+  True 
+  False 
+ 
+Question 2
+1 / 1 pts
+When creating reusable code, is it more efficient to place repeated logic inside a method rather than rewriting it multiple times in the main program?
+
+  True 
+  False 
+ 
+Incorrect
+Question 3
+0 / 1 pts
+What loop structure is used for iterating rows and columns in 2D arrays?
+
+Nested for Loop
+ 
+Incorrect
+Question 4
+0 / 1 pts
+What method is used to find the length of a string?
+
+str.length()
+ 
+Question 5
+1 / 1 pts
+What part of a method contains the actual code to be executed?
+
+Method Body
+ 
+Question 6
+1 / 1 pts
+What is the value of matrix[1][2] in a 2D array?
+
+  Second row, third column 
+  Third row, second column 
+  First row, second column 
+  Second row, first column 
+ 
+Question 7
+1 / 1 pts
+Which of the following best describes a Java method?
+
+  A data type 
+  A variable that stores multiple values 
+  A block of code that performs a specific task 
+  A loop structure 
+ 
+Question 8
+1 / 1 pts
+When modifying an array element using its index, does the new value replace the previous value stored at that position?
+
+  True 
+  False 
+ 
+Question 9
+1 / 1 pts
+What is the output of Math.sqrt(25)?
+
+  5 
+  0 
+  25 
+  null 
+ 
+Question 10
+1 / 1 pts
+If a nested loop is used to display elements of a 2D array, will removing the inner loop still allow all elements to be printed correctly?
+
+  True 
+  False 
+ 
+Question 11
+1 / 1 pts
+What structure stores multiple values in one variable?
+
+Array
+ 
+Question 12
+1 / 1 pts
+What is the position of elements in an array called?
+
+Index
+ 
+Incorrect
+Question 13
+0 / 1 pts
+What Java class provides methods like max(), min(), and sqrt()?
+
+Predefined Methods
+ 
+Question 14
+1 / 1 pts
+Which of the following is a predefined method?
+
+  square() 
+  myMethod() 
+  length() 
+  addNumbers() 
+ 
+Question 15
+1 / 1 pts
+What type of array contains rows and columns?
+
+2D Array
+ 
+Question 16
+1 / 1 pts
+What does break do?
+
+  Exit loop 
+  Skip iteration 
+  Restart loop 
+  Continue loop 
+ 
+Question 17
+1 / 1 pts
+int x = 6;
+if(x % 2 == 0)
+System.out.println("Even");
+else
+System.out.println("Odd");
+
+Even
+ 
+Question 18
+1 / 1 pts
+What type of loop is for(;;)?
+
+  Nested 
+  Infinite 
+  Selection 
+  Conditional 
+ 
+Incorrect
+Question 19
+0 / 1 pts
+Statement used to evaluate conditions and control execution.
+
+Decision-making Statements
+ 
+Question 20
+1 / 1 pts
+An if statement inside another if statement.
+
+Nested if statement
+ 
+Question 21
+1 / 1 pts
+Which statement is optional in switch?
+
+  D. Both B and C 
+  C. default 
+  B. break 
+  A. case 
+ 
+Question 22
+1 / 1 pts
+What does continue do?
+
+  Ends program 
+  Skips iteration 
+  Stops loop 
+  Repeats code 
+ 
+Incorrect
+Question 23
+0 / 1 pts
+The simplest decision-making statement.
+
+Simple If statement
+ 
+Question 24
+1 / 1 pts
+The if statement only runs when condition is true.
+
+  True 
+  False 
+ 
+Incorrect
+Question 25
+0 / 1 pts
+A chain of conditions forming a decision tree.
+
+If else if ladder
+ 
+Incorrect
+Question 26
+0 / 1 pts
+break is required in every switch case.
+
+  True 
+  False 
+ 
+Question 27
+1 / 1 pts
+What will be output?
+
+for(int i=1;i<=3;i++){
+System.out.print(i);
+}
+
+123
+ 
+Question 28
+1 / 1 pts
+Infinite loops never stop unless controlled.
+
+  True 
+  False 
+ 
+Incorrect
+Question 29
+0 / 1 pts
+What data type is NOT allowed in switch?
+
+double
+ 
+Question 30
+1 / 1 pts
+switch can replace if-else-if.
+
+  True 
+  False 
+ 
+Question 31
+1 / 1 pts
+Which input type allows data to be passed during program execution through terminal commands?
+
+  Keyboard Input 
+  File input 
+  Command line input 
+  Scanner Input 
+ 
+Question 32
+1 / 1 pts
+Which method is used to read an entire line using Scanner?
+
+  nextLine() 
+  next() 
+  get() 
+  readLine() 
+ 
+Incorrect
+Question 33
+0 / 1 pts
+What structure receives command line inputs in the main method?
+
+String array
+ 
+Question 34
+1 / 1 pts
+If a program uses the Console class to input a password, will the characters typed by the user be visible on the screen?
+
+  True 
+  False 
+ 
+Incorrect
+Question 35
+0 / 1 pts
+What keyword is used to import the Scanner class?
+
+import java.util.scanner
+ 
+Incorrect
+Question 36
+0 / 1 pts
+Which class is considered more primitive for input handling?
+
+
+  Console 
+  Scanner 
+  File 
+  BufferedReader 
+ 
+Question 37
+1 / 1 pts
+If nextLine() is used immediately after nextInt() in a Scanner program, will it always correctly capture the next line of input without issues?
+
+  True 
+  False 
+ 
+Question 38
+1 / 1 pts
+Which of the following is required to use Console class?
+
+  java.net.Consolelibrary 
+  java.util.Consolelibrary 
+  java.io.Consolelibrary 
+  java.lang.Consolelibrary 
+ 
+Question 39
+1 / 1 pts
+If a programmer writes java MyProgram 10 20, will the values 10 and 20 be treated as integer types directly by the JVM?
+
+  True 
+  False 
+ 
+Question 40
+1 / 1 pts
+If a developer forgets to wrap System.in with InputStreamReader before using BufferedReader, will the program still compile and run correctly?
+
+  True 
+  False 
+ 
+Question 41
+1 / 1 pts
+What is the parameter used in the main method for command line arguments?
+
+  String[] args 
+  String input[] 
+  char args[] 
+  int args[] 
+ 
+Question 42
+1 / 1 pts
+What is the purpose of closing input streams?
+
+  To delete data 
+  To compile faster 
+  To compile faster 
+  To avoid memory leaks 
+ 
+Question 43
+1 / 1 pts
+Which Scanner method reads a floating-point number?
+
+  readLineFloat() 
+  nextLineFloat() 
+  nextFloat() 
+  nextDouble() 
+ 
+Question 44
+1 / 1 pts
+What class provides parsing methods like nextInt() and nextDouble()?
+
+   
+   
+  Scanner 
+   
+ 
+Question 45
+1 / 1 pts
+What is the primary function of the BufferedReader class?
+
+  To buffer and read text input 
+  To store files 
+  To display output 
+  To compile programs 

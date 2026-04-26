@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyButtons();
   initProgressBar();
   initContactForm();
+  initLightbox();
 });
 
 
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ────────────────────────────── */
 function initNav() {
   const toggle = document.querySelector('.nav__toggle');
-  const links  = document.querySelector('.nav__links');
+  const links = document.querySelector('.nav__links');
   if (!toggle || !links) return;
 
   toggle.addEventListener('click', () => {
@@ -88,7 +89,8 @@ function initCards() {
 
 function toggleCard(header) {
   const card = header.closest('.card');
-  const body = card.querySelector('.card__body');
+  // Use :scope > .card__body to make sure we only target the direct child body
+  const body = card.querySelector(':scope > .card__body') || card.querySelector('.card__body');
   const isExpanded = card.classList.contains('expanded');
 
   card.classList.toggle('expanded');
@@ -96,7 +98,18 @@ function toggleCard(header) {
 
   if (!isExpanded) {
     body.style.maxHeight = body.scrollHeight + 'px';
+    setTimeout(() => {
+      if (card.classList.contains('expanded')) {
+        body.style.maxHeight = 'none';
+      }
+    }, 400); // Wait for transition
   } else {
+    // If we're closing and height was none, we need to set it back to pixel value first
+    if (body.style.maxHeight === 'none') {
+      body.style.maxHeight = body.scrollHeight + 'px';
+      // Force reflow
+      void body.offsetHeight;
+    }
     body.style.maxHeight = '0px';
   }
 }
@@ -107,13 +120,22 @@ function toggleCard(header) {
    ────────────────────────────── */
 function initTabs() {
   document.querySelectorAll('[data-tabs]').forEach(group => {
-    const tabs   = group.querySelectorAll('.tab');
+    const tabs = group.querySelectorAll('.tab');
     const panels = group.querySelectorAll('.tab-panel');
 
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.target;
+      // Dynamically count items and append to tab text
+      const target = tab.dataset.target;
+      const panel = group.querySelector(`#${target}`);
 
+      if (panel && !tab.hasAttribute('data-counted')) {
+        // Count only the direct top-level cards (the actual main items)
+        const count = panel.querySelectorAll(':scope > .card').length;
+        tab.innerHTML += ` <span style="opacity: 0.5; font-size: 0.85em; margin-left: 4px;">(${count})</span>`;
+        tab.setAttribute('data-counted', 'true');
+      }
+
+      tab.addEventListener('click', () => {
         tabs.forEach(t => {
           t.classList.remove('active');
           t.setAttribute('aria-selected', 'false');
@@ -123,7 +145,6 @@ function initTabs() {
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
 
-        const panel = group.querySelector(`#${target}`);
         if (panel) panel.classList.add('active');
       });
     });
@@ -213,4 +234,41 @@ function showMsg(form, text, type) {
     el.style.transition = 'opacity 0.3s';
     setTimeout(() => el.remove(), 300);
   }, 3500);
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   8. IMAGE LIGHTBOX
+   ════════════════════════════════════════════════════════════ */
+function initLightbox() {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox__close');
+
+  if (!modal || !modalImg || !closeBtn) return;
+
+  // Add click listener to images with a specific class
+  document.querySelectorAll('.previewable-image').forEach(img => {
+    img.addEventListener('click', function () {
+      modal.classList.add('show');
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  });
+
+  // Close modal functions
+  function closeModal() {
+    modal.classList.remove('show');
+    setTimeout(() => { modalImg.src = ''; }, 300); // clear after fade
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal(); // Close when clicking outside image
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+  });
 }
