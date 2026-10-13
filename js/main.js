@@ -208,13 +208,16 @@ function initContactForm() {
     e.preventDefault();
     const name = form.querySelector('#form-name').value.trim();
     const email = form.querySelector('#form-email').value.trim();
+    const subject = form.querySelector('#form-subject').value.trim();
     const message = form.querySelector('#form-message').value.trim();
 
     if (!name || !email || !message) {
       showMsg(form, 'Please fill in all fields.', 'error');
       return;
     }
-    showMsg(form, 'Message sent successfully.', 'success');
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    window.location.href = `mailto:jayveehilario26@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio inquiry')}&body=${encodeURIComponent(body)}`;
+    showMsg(form, 'Opening your email app — press Send there to deliver your message.', 'success');
     form.reset();
   });
 }
@@ -309,20 +312,34 @@ async function initProjects() {
   try {
     const res = await fetch('https://api.github.com/users/jvhlr/repos?sort=updated&per_page=100');
     if (!res.ok) throw new Error('github api');
-    const repos = (await res.json()).filter(r => !r.fork);
+    const repos = (await res.json()).filter(r => !r.fork && r.name !== 'OOP-Portfolio-Website');
     if (!repos.length) return;
     grid.innerHTML = repos.map(repo => {
       const lang = repo.language ? `<span>${repo.language}</span> &middot; ` : '';
       const stars = `&#9733; ${repo.stargazers_count}`;
       const updated = new Date(repo.updated_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-      const desc = repo.description ? repo.description : 'No description yet.';
+      let desc = repo.description ? repo.description : 'No description yet.';
+      if (repo.name === 'Trading-Agent' || repo.name === 'HydroReminder') desc += ' (WIP)';
+      let thumb = '';
+      if (repo.name === 'Trading-Agent') {
+        thumb = `<img class="feature__thumb" src="img/trading-agent-gui.jpg" alt="Trading-Agent Market Chart screen" loading="lazy">`;
+      } else if (repo.name === 'HydroReminder') {
+        thumb = `<img class="feature__thumb feature__thumb--icon" src="img/hydroreminder-icon.png" alt="HydroReminder app icon" loading="lazy">`;
+      }
       return `<article class="feature">
+        ${thumb}
         <h3 class="feature__title">${repo.name}</h3>
         <p class="feature__text">${desc}</p>
         <p class="feature__text feature__meta">${lang}${stars} &middot; updated ${updated}</p>
         <p class="feature__text"><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
       </article>`;
     }).join('');
+    grid.innerHTML += `<article class="feature">
+        <img class="feature__thumb" src="img/kiosk-gui.jpg" alt="Government Assistance Kiosk welcome screen" loading="lazy">
+        <h3 class="feature__title">Government Assistance Kiosk</h3>
+        <p class="feature__text">A kiosk-style web app for government assistance applications: program selection, requirements checklist, document upload, reference-number tracking, and ID photo capture.</p>
+        <p class="feature__text"><a href="https://kioskkk.netlify.app/" target="_blank" rel="noopener noreferrer">Visit live site</a></p>
+      </article>`;
     grid.classList.add('visible');
   } catch (e) {
     /* keep the static fallback cards */
@@ -478,21 +495,4 @@ function initBackToTop() {
     btn.classList.toggle('back-to-top--visible', window.scrollY > 600);
   }, { passive: true });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-}
-
-
-/* ──────────────────────────────
-   15. EDUCATION — collapsible activities
-   ────────────────────────────── */
-function initEduToggle() {
-  document.querySelectorAll('.edu-toggle').forEach((btn) => {
-    const panel = btn.nextElementSibling;
-    if (!panel || !panel.classList.contains('edu-activities')) return;
-    const icon = btn.querySelector('.edu-toggle__icon');
-    btn.addEventListener('click', () => {
-      const collapsed = panel.classList.toggle('edu-activities--collapsed');
-      btn.setAttribute('aria-expanded', String(!collapsed));
-      if (icon) icon.textContent = collapsed ? '+' : '\u2212';
-    });
-  });
 }

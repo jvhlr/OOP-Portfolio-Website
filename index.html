@@ -19,14 +19,14 @@
   <!-- ═══ NAV ═══ -->
   <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">Jayvee Hilario</a>
+      <a href="#top" class="nav__brand">jvhlr</a>
       <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
       <ul class="nav__links">
         <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#education" class="nav__link">Education</a></li>
-        <li><a href="#certifications" class="nav__link">Certifications</a></li>
-        <li><a href="#skills" class="nav__link">Skills</a></li>
         <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#certifications" class="nav__link">Certifications</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
       <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
@@ -130,93 +130,55 @@
       </div>
     </section>
 
-    <!-- ═══ EDUCATION ═══ -->
-    <section class="section section--border" id="education">
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="section section--border" id="projects">
       <div class="container">
-        <h2 class="section-title fade-in">Education</h2>
+        <h2 class="section-title fade-in">Projects</h2>
         <p class="section-subtitle fade-in">
-          Where I studied — and what I did there.
+          Selected work — from GitHub and the live web.
         </p>
 
-        <div class="edu-grid stagger">
-          <article class="edu-card">
-            <span class="edu-badge">College</span>
-            <div class="edu-head">
-              <span class="edu-logo"><img src="img/pup-seal.png" alt="PUP seal" width="64" height="64"></span>
-              <div class="edu-head__text">
-                <h3 class="edu-school">Polytechnic University of the Philippines</h3>
-                <p class="edu-program">Bachelor of Science in Information Technology</p>
-                <p class="edu-years">2024 &ndash; Present &middot; 3rd Year</p>
-              </div>
-            </div>
-            <button type="button" class="edu-toggle" aria-expanded="false">
-              <span><span class="edu-star" aria-hidden="true">&#9733;</span> Activities &amp; Experiences</span>
-              <span class="edu-toggle__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="edu-activities edu-activities--collapsed">
-              <ul class="edu-list">
-                <li>CNCP <span class="edu-list__detail">&mdash; Cisco NetConnect PUP</span></li>
-                <li>GDG <span class="edu-list__detail">&mdash; Google Developers Group</span></li>
-              </ul>
-            </div>
+        <div class="features stagger" id="project-grid">
+          <article class="feature">
+            <img class="feature__thumb" src="img/trading-agent-gui.jpg" alt="Trading-Agent Market Chart screen" loading="lazy">
+            <h3 class="feature__title">Trading-Agent</h3>
+            <p class="feature__text">
+              Python research prototype of an XAUUSD trading agent: backtesting
+              engine, ML classifiers, and a PySide6 desktop GUI. Live trading
+              stays off — this one is for learning how markets and models
+              behave. (WIP)
+            </p>
+            <p class="feature__text">
+              <a href="https://github.com/jvhlr/Trading-Agent" target="_blank"
+                rel="noopener noreferrer">View on GitHub</a>
+            </p>
           </article>
 
-          <article class="edu-card">
-            <span class="edu-badge">Senior High School</span>
-            <div class="edu-head">
-              <span class="edu-logo"><img src="img/dyci-seal.png" alt="Dr. Yanga's Colleges seal" width="64" height="64"></span>
-              <div class="edu-head__text">
-                <h3 class="edu-school">Dr. Yanga&rsquo;s Colleges</h3>
-                <p class="edu-program">Senior High School &ndash; STEM</p>
-                <p class="edu-years">2021 &ndash; 2023</p>
-              </div>
-            </div>
-            <button type="button" class="edu-toggle" aria-expanded="false">
-              <span><span class="edu-star" aria-hidden="true">&#9733;</span> Activities &amp; Experiences</span>
-              <span class="edu-toggle__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="edu-activities edu-activities--collapsed">
-              <ul class="edu-list">
-                <li>Best Research Capstone</li>
-                <li>DYCI Debate Society</li>
-                <li>BHSDC Octo-finalist</li>
-                <li>With Honors</li>
-                <li>Science Quiz Bee &mdash; 3rd Place</li>
-              </ul>
-            </div>
+          <article class="feature">
+            <img class="feature__thumb feature__thumb--icon" src="img/hydroreminder-icon.png" alt="HydroReminder app icon" loading="lazy">
+            <h3 class="feature__title">HydroReminder</h3>
+            <p class="feature__text">
+              A small JavaScript app that reminds you to drink water. Simple,
+              useful, and my first finished side project end to end. (WIP)
+            </p>
+            <p class="feature__text">
+              <a href="https://github.com/jvhlr/HydroReminder" target="_blank"
+                rel="noopener noreferrer">View on GitHub</a>
+            </p>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ═══ CERTIFICATIONS ═══ -->
-    <section class="section" id="certifications">
-      <div class="container">
-        <h2 class="section-title fade-in">Certifications</h2>
-        <p class="section-subtitle fade-in">
-          Credentials I&apos;ve earned.
-        </p>
-
-        <div class="cert-grid stagger">
-          <article class="cert-card">
-            <span class="cert-logo" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="9.5" height="9.5" fill="#f25022"/><rect x="12.5" y="2" width="9.5" height="9.5" fill="#7fba00"/><rect x="2" y="12.5" width="9.5" height="9.5" fill="#00a4ef"/><rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#ffb900"/></svg>
-            </span>
-            <div class="cert-card__text">
-              <h3 class="cert-card__title">Microsoft Office Specialist</h3>
-              <p class="cert-card__detail">Excel Associate (Office 2019)</p>
-              <p class="cert-card__meta">Issued May 2024 &middot; via Certiport</p>
-              <a class="cert-card__verify" href="https://www.credly.com/badges/d2aabe0f-3e57-462a-8a1d-1a40502e9721/public_url" target="_blank" rel="noopener">Verify credential &#8599;</a>
-            </div>
-          </article>
-          <article class="cert-card">
-            <span class="cert-logo cert-logo--text" aria-hidden="true">ADBI</span>
-            <div class="cert-card__text">
-              <h3 class="cert-card__title">Cybersecurity</h3>
-              <p class="cert-card__detail">Certificate of Completion &middot; ADBI E-Learning</p>
-              <p class="cert-card__meta">Completed October 2026</p>
-              <a class="cert-card__verify" href="https://elearning-adbi.org/certificate-verifier/?&amp;code=205833-179-130-6940" target="_blank" rel="noopener">Verify credential &#8599;</a>
-            </div>
+          <article class="feature">
+            <img class="feature__thumb" src="img/kiosk-gui.jpg" alt="Government Assistance Kiosk welcome screen" loading="lazy">
+            <h3 class="feature__title">Government Assistance Kiosk</h3>
+            <p class="feature__text">
+              A kiosk-style web app for government assistance applications:
+              program selection, requirements checklist, document upload,
+              reference-number tracking, and ID photo capture.
+            </p>
+            <p class="feature__text">
+              <a href="https://kioskkk.netlify.app/" target="_blank"
+                rel="noopener noreferrer">Visit live site</a>
+            </p>
           </article>
         </div>
       </div>
@@ -285,57 +247,102 @@
       </div>
     </section>
 
-    <!-- ═══ PROJECTS ═══ -->
-    <section class="section section--border" id="projects">
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <section class="section" id="certifications">
       <div class="container">
-        <h2 class="section-title fade-in">Projects</h2>
+        <h2 class="section-title fade-in">Certifications</h2>
         <p class="section-subtitle fade-in">
-          Pulled straight from my GitHub.
+          Credentials I&apos;ve earned.
         </p>
 
-        <div class="features stagger" id="project-grid">
-          <article class="feature">
-            <h3 class="feature__title">Trading-Agent</h3>
-            <p class="feature__text">
-              Python research prototype of an XAUUSD trading agent: backtesting
-              engine, ML classifiers, and a PySide6 desktop GUI. Live trading
-              stays off — this one is for learning how markets and models
-              behave.
-            </p>
-            <p class="feature__text">
-              <a href="https://github.com/jvhlr/Trading-Agent" target="_blank"
-                rel="noopener noreferrer">View on GitHub</a>
-            </p>
+        <div class="cert-grid stagger">
+          <article class="cert-card">
+            <span class="cert-logo" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="9.5" height="9.5" fill="#f25022"/><rect x="12.5" y="2" width="9.5" height="9.5" fill="#7fba00"/><rect x="2" y="12.5" width="9.5" height="9.5" fill="#00a4ef"/><rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#ffb900"/></svg>
+            </span>
+            <div class="cert-card__text">
+              <h3 class="cert-card__title">Microsoft Office Specialist</h3>
+              <p class="cert-card__detail">Excel Associate (Office 2019)</p>
+              <p class="cert-card__meta">Issued May 2024 &middot; via Certiport</p>
+              <a class="cert-card__verify" href="https://www.credly.com/badges/d2aabe0f-3e57-462a-8a1d-1a40502e9721/public_url" target="_blank" rel="noopener">Verify credential &#8599;</a>
+            </div>
           </article>
-
-          <article class="feature">
-            <h3 class="feature__title">HydroReminder</h3>
-            <p class="feature__text">
-              A small JavaScript app that reminds you to drink water. Simple,
-              useful, and my first finished side project end to end.
-            </p>
-            <p class="feature__text">
-              <a href="https://github.com/jvhlr/HydroReminder" target="_blank"
-                rel="noopener noreferrer">View on GitHub</a>
-            </p>
-          </article>
-
-          <article class="feature">
-            <h3 class="feature__title">This portfolio</h3>
-            <p class="feature__text">
-              The site you're looking at — a hand-built static portfolio in
-              HTML, CSS, and vanilla JavaScript. No frameworks, no build step.
-            </p>
-            <p class="feature__text">
-              <a href="https://github.com/jvhlr/OOP-Portfolio-Website" target="_blank"
-                rel="noopener noreferrer">View on GitHub</a>
-            </p>
+          <article class="cert-card">
+            <span class="cert-logo cert-logo--text" aria-hidden="true">ADBI</span>
+            <div class="cert-card__text">
+              <h3 class="cert-card__title">Cybersecurity</h3>
+              <p class="cert-card__detail">Certificate of Completion &middot; ADBI E-Learning</p>
+              <p class="cert-card__meta">Completed October 2026</p>
+              <a class="cert-card__verify" href="https://elearning-adbi.org/certificate-verifier/?&amp;code=205833-179-130-6940" target="_blank" rel="noopener">Verify credential &#8599;</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══ CONTACT ═══ -->
+    <!-- ═══ EDUCATION ═══ -->
+        <section class="section section--border" id="education">
+      <div class="container">
+        <h2 class="section-title fade-in">Education</h2>
+        <p class="section-subtitle fade-in">
+          Where I studied — and what I did there.
+        </p>
+
+        <div class="timeline stagger">
+          <div class="timeline__item">
+            <span class="timeline__dot timeline__dot--now" aria-hidden="true"></span>
+            <p class="timeline__years">2024 &ndash; Present &middot; 3rd Year</p>
+            <article class="timeline__card">
+              <div class="edu-head">
+                <span class="edu-logo"><img src="img/pup-seal.png" alt="PUP seal" width="64" height="64"></span>
+                <div class="edu-head__text">
+                  <h3 class="edu-school">Polytechnic University of the Philippines</h3>
+                  <p class="edu-program">Bachelor of Science in Information Technology</p>
+                </div>
+              </div>
+              <h4 class="timeline__subhead">What I&apos;m learning</h4>
+              <ul class="timeline__list">
+                <li>Object-oriented programming (Java)</li>
+                <li>Networking fundamentals + Packet Tracer labs</li>
+              </ul>
+              <h4 class="timeline__subhead">Activities</h4>
+              <ul class="timeline__tags">
+                <li>CNCP &mdash; Cisco NetConnect PUP</li>
+                <li>GDG &mdash; Google Developers Group</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="timeline__years">2021 &ndash; 2023</p>
+            <article class="timeline__card">
+              <div class="edu-head">
+                <span class="edu-logo"><img src="img/dyci-seal.png" alt="Dr. Yanga's Colleges seal" width="64" height="64"></span>
+                <div class="edu-head__text">
+                  <h3 class="edu-school">Dr. Yanga&rsquo;s Colleges</h3>
+                  <p class="edu-program">Senior High School &ndash; STEM</p>
+                </div>
+              </div>
+              <h4 class="timeline__subhead">What I learned</h4>
+              <ul class="timeline__list">
+                <li>Research methods &mdash; Best Research Capstone</li>
+                <li>Public speaking &amp; argumentation &mdash; Debate Society</li>
+                <li>STEM foundations</li>
+              </ul>
+              <h4 class="timeline__subhead">Highlights</h4>
+              <ul class="timeline__tags">
+                <li>BHSDC Octo-finalist</li>
+                <li>With Honors</li>
+                <li>Science Quiz Bee &mdash; 3rd Place</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ═══ CONTACT ═══ -->
     <section class="section" id="contact">
       <div class="container">
         <h2 class="section-title fade-in">Contact</h2>
@@ -412,6 +419,13 @@
 
   </main>
 
+  <!-- ═══ PRIVACY POLICY ═══ -->
+  <section class="privacy" id="privacy">
+    <div class="container">
+      <p class="privacy__text"><strong>Privacy Policy.</strong> This site collects no personal data. The contact form opens your email app &mdash; nothing is sent to or stored here. Your theme choice stays in your browser.</p>
+    </div>
+  </section>
+
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container">
@@ -419,11 +433,12 @@
         <p class="footer__text">2026 Jayvee Hilario — PUP</p>
         <ul class="footer__links">
           <li><a href="#about" class="footer__link">About</a></li>
-          <li><a href="#education" class="footer__link">Education</a></li>
-          <li><a href="#certifications" class="footer__link">Certifications</a></li>
-          <li><a href="#skills" class="footer__link">Skills</a></li>
           <li><a href="#projects" class="footer__link">Projects</a></li>
+          <li><a href="#skills" class="footer__link">Skills</a></li>
+          <li><a href="#certifications" class="footer__link">Certifications</a></li>
+          <li><a href="#education" class="footer__link">Education</a></li>
           <li><a href="#contact" class="footer__link">Contact</a></li>
+          <li><a href="#privacy" class="footer__link">Privacy</a></li>
         </ul>
       </div>
     </div>
