@@ -19,7 +19,7 @@
   <!-- ═══ NAV ═══ -->
   <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">Jayvee Hilario</a>
+      <a href="#top" class="nav__brand">jvhlr</a>
       <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
       <ul class="nav__links">
         <li><a href="#about" class="nav__link">About</a></li>
@@ -131,65 +131,69 @@
     </section>
 
     <!-- ═══ EDUCATION ═══ -->
-    <section class="section section--border" id="education">
+        <section class="section section--border" id="education">
       <div class="container">
         <h2 class="section-title fade-in">Education</h2>
         <p class="section-subtitle fade-in">
           Where I studied — and what I did there.
         </p>
 
-        <div class="edu-grid stagger">
-          <article class="edu-card">
-            <span class="edu-badge">College</span>
-            <div class="edu-head">
-              <span class="edu-logo"><img src="img/pup-seal.png" alt="PUP seal" width="64" height="64"></span>
-              <div class="edu-head__text">
-                <h3 class="edu-school">Polytechnic University of the Philippines</h3>
-                <p class="edu-program">Bachelor of Science in Information Technology</p>
-                <p class="edu-years">2024 &ndash; Present &middot; 3rd Year</p>
+        <div class="timeline stagger">
+          <div class="timeline__item">
+            <span class="timeline__dot timeline__dot--now" aria-hidden="true"></span>
+            <p class="timeline__years">2024 &ndash; Present &middot; 3rd Year</p>
+            <article class="timeline__card">
+              <div class="edu-head">
+                <span class="edu-logo"><img src="img/pup-seal.png" alt="PUP seal" width="64" height="64"></span>
+                <div class="edu-head__text">
+                  <h3 class="edu-school">Polytechnic University of the Philippines</h3>
+                  <p class="edu-program">Bachelor of Science in Information Technology</p>
+                </div>
               </div>
-            </div>
-            <button type="button" class="edu-toggle" aria-expanded="false">
-              <span><span class="edu-star" aria-hidden="true">&#9733;</span> Activities &amp; Experiences</span>
-              <span class="edu-toggle__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="edu-activities edu-activities--collapsed">
-              <ul class="edu-list">
-                <li>CNCP <span class="edu-list__detail">&mdash; Cisco NetConnect PUP</span></li>
-                <li>GDG <span class="edu-list__detail">&mdash; Google Developers Group</span></li>
+              <h4 class="timeline__subhead">What I&apos;m learning</h4>
+              <ul class="timeline__list">
+                <li>Object-oriented programming (Java)</li>
+                <li>Networking fundamentals + Packet Tracer labs</li>
+                <li>Data structures &amp; algorithms</li>
               </ul>
-            </div>
-          </article>
+              <h4 class="timeline__subhead">Activities</h4>
+              <ul class="timeline__tags">
+                <li>CNCP &mdash; Cisco NetConnect PUP</li>
+                <li>GDG &mdash; Google Developers Group</li>
+              </ul>
+            </article>
+          </div>
 
-          <article class="edu-card">
-            <span class="edu-badge">Senior High School</span>
-            <div class="edu-head">
-              <span class="edu-logo"><img src="img/dyci-seal.png" alt="Dr. Yanga's Colleges seal" width="64" height="64"></span>
-              <div class="edu-head__text">
-                <h3 class="edu-school">Dr. Yanga&rsquo;s Colleges</h3>
-                <p class="edu-program">Senior High School &ndash; STEM</p>
-                <p class="edu-years">2021 &ndash; 2023</p>
+          <div class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="timeline__years">2021 &ndash; 2023</p>
+            <article class="timeline__card">
+              <div class="edu-head">
+                <span class="edu-logo"><img src="img/dyci-seal.png" alt="Dr. Yanga's Colleges seal" width="64" height="64"></span>
+                <div class="edu-head__text">
+                  <h3 class="edu-school">Dr. Yanga&rsquo;s Colleges</h3>
+                  <p class="edu-program">Senior High School &ndash; STEM</p>
+                </div>
               </div>
-            </div>
-            <button type="button" class="edu-toggle" aria-expanded="false">
-              <span><span class="edu-star" aria-hidden="true">&#9733;</span> Activities &amp; Experiences</span>
-              <span class="edu-toggle__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="edu-activities edu-activities--collapsed">
-              <ul class="edu-list">
-                <li>Best Research Capstone</li>
-                <li>DYCI Debate Society</li>
+              <h4 class="timeline__subhead">What I learned</h4>
+              <ul class="timeline__list">
+                <li>Research methods &mdash; Best Research Capstone</li>
+                <li>Public speaking &amp; argumentation &mdash; Debate Society</li>
+                <li>STEM foundations</li>
+              </ul>
+              <h4 class="timeline__subhead">Highlights</h4>
+              <ul class="timeline__tags">
                 <li>BHSDC Octo-finalist</li>
                 <li>With Honors</li>
                 <li>Science Quiz Bee &mdash; 3rd Place</li>
               </ul>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ CERTIFICATIONS ═══ -->
+<!-- ═══ CERTIFICATIONS ═══ -->
     <section class="section" id="certifications">
       <div class="container">
         <h2 class="section-title fade-in">Certifications</h2>
