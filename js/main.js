@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initProgressBar();
   initContactForm();
   initLightbox();
+  initTyped();
+  initProjects();
+  initTheme();
+  initTerminal();
+  initSkills();
+  initBackToTop();
+  initEduToggle();
 });
 
 
@@ -270,5 +277,222 @@ function initLightbox() {
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+  });
+}
+
+
+/* ──────────────────────────────
+   9. TYPED EFFECT (hero)
+   ────────────────────────────── */
+function initTyped() {
+  const el = document.getElementById('typed-text');
+  if (!el) return;
+  const phrases = ['machine learning.', 'software development.', 'web apps.', 'mobile apps.'];
+  let pi = 0, ci = 0, deleting = false;
+  (function tick() {
+    const word = phrases[pi];
+    ci += deleting ? -1 : 1;
+    el.textContent = word.slice(0, ci);
+    let delay = deleting ? 40 : 80;
+    if (!deleting && ci === word.length) { delay = 1600; deleting = true; }
+    else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
+    setTimeout(tick, delay);
+  })();
+}
+
+/* ──────────────────────────────
+   10. LIVE GITHUB PROJECTS
+   ────────────────────────────── */
+async function initProjects() {
+  const grid = document.getElementById('project-grid');
+  if (!grid) return;
+  try {
+    const res = await fetch('https://api.github.com/users/jvhlr/repos?sort=updated&per_page=100');
+    if (!res.ok) throw new Error('github api');
+    const repos = (await res.json()).filter(r => !r.fork);
+    if (!repos.length) return;
+    grid.innerHTML = repos.map(repo => {
+      const lang = repo.language ? `<span>${repo.language}</span> &middot; ` : '';
+      const stars = `&#9733; ${repo.stargazers_count}`;
+      const updated = new Date(repo.updated_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      const desc = repo.description ? repo.description : 'No description yet.';
+      return `<article class="feature">
+        <h3 class="feature__title">${repo.name}</h3>
+        <p class="feature__text">${desc}</p>
+        <p class="feature__text feature__meta">${lang}${stars} &middot; updated ${updated}</p>
+        <p class="feature__text"><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+      </article>`;
+    }).join('');
+    grid.classList.add('visible');
+  } catch (e) {
+    /* keep the static fallback cards */
+  }
+}
+
+
+/* ──────────────────────────────
+   11. THEME TOGGLE (dark / light)
+   ────────────────────────────── */
+function initTheme() {
+  const btn = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  try {
+    if (localStorage.getItem('theme') === 'light') root.setAttribute('data-theme', 'light');
+  } catch (e) { /* storage unavailable */ }
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', 'light');
+    try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) { /* ignore */ }
+  });
+}
+
+/* ──────────────────────────────
+   12. TERMINAL (about section)
+   ────────────────────────────── */
+function initTerminal() {
+  const input = document.getElementById('terminal-input');
+  const body = document.getElementById('terminal-body');
+  if (!input || !body) return;
+
+  const commands = {
+    help: 'try: whoami · skills · projects · contact · clear',
+    whoami: 'jayvee hilario — bsit student, aspiring developer & network engineer, metro manila',
+    skills: 'java · python · javascript · html/css · git · currently exploring ml',
+    projects: 'trading-agent (python) · hydroreminder (js) · this portfolio — see the projects section below',
+    contact: 'jayveehilario26@gmail.com · github.com/jvhlr',
+    clear: null,
+  };
+
+  function printLine(prompted, text, cls) {
+    const line = document.createElement('div');
+    line.className = cls || 'terminal__line';
+    if (prompted) {
+      const p = document.createElement('span');
+      p.className = 'terminal__prompt';
+      p.textContent = '>';
+      line.appendChild(p);
+      line.appendChild(document.createTextNode('\u00a0' + text));
+    } else {
+      line.textContent = text;
+      line.classList.add('terminal__output');
+    }
+    body.appendChild(line);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const raw = input.value.trim().toLowerCase();
+    input.value = '';
+    if (!raw) return;
+    printLine(true, raw);
+    if (raw === 'clear') { replayBoot(); return; }
+    if (commands[raw]) printLine(false, commands[raw]);
+    else printLine(false, `command not found: ${raw} — try 'help'`);
+  });
+
+  /* Clear replays the boot sequence instead of blanking the screen */
+  let booting = false;
+  function replayBoot() {
+    if (booting) return;
+    booting = true;
+    input.disabled = true;
+    body.innerHTML = '';
+    const bootLines = [
+      'PHOSPHOR WORKS (TM) TERMLINK PROTOCOL',
+      'SECURE CONNECTION ESTABLISHED',
+    ];
+    let i = 0;
+    const nextLine = () => {
+      if (i < bootLines.length) {
+        printLine(false, bootLines[i]);
+        i++;
+        setTimeout(nextLine, 280);
+      } else {
+        animateProgress();
+      }
+    };
+    const animateProgress = () => {
+      const line = document.createElement('div');
+      line.className = 'terminal__line terminal__output';
+      body.appendChild(line);
+      let pct = 0;
+      const tick = () => {
+        const filled = Math.floor(pct / 10);
+        line.textContent = 'INITIALIZING [' + '#'.repeat(filled) + '-'.repeat(10 - filled) + '] ' + pct + '%';
+        body.scrollTop = body.scrollHeight;
+        if (pct < 100) {
+          pct += 10;
+          setTimeout(tick, 90);
+        } else {
+          printLine(false, '');
+          printLine(false, "type 'help' to begin.");
+          booting = false;
+          input.disabled = false;
+          input.focus();
+        }
+      };
+      tick();
+    };
+    nextLine();
+  }
+
+  // focus input when clicking anywhere in the terminal
+  const term = input.closest('.terminal');
+  if (term) term.addEventListener('click', () => input.focus());
+}
+
+/* ──────────────────────────────
+   13. INTERACTIVE SKILLS
+   ────────────────────────────── */
+function initSkills() {
+  document.querySelectorAll('.skill-chip').forEach((chip) => {
+    const card = chip.closest('.feature');
+    const hint = card ? card.querySelector('.skill-used') : null;
+    if (!hint) return;
+    const def = hint.textContent;
+    const show = () => {
+      hint.textContent = '\u2192 ' + chip.dataset.used;
+      hint.classList.add('skill-used--active');
+    };
+    const hide = () => {
+      hint.textContent = def;
+      hint.classList.remove('skill-used--active');
+    };
+    chip.addEventListener('mouseenter', show);
+    chip.addEventListener('focus', show);
+    chip.addEventListener('mouseleave', hide);
+    chip.addEventListener('blur', hide);
+  });
+}
+
+/* ──────────────────────────────
+   14. BACK TO TOP
+   ────────────────────────────── */
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('back-to-top--visible', window.scrollY > 600);
+  }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+
+/* ──────────────────────────────
+   15. EDUCATION — collapsible activities
+   ────────────────────────────── */
+function initEduToggle() {
+  document.querySelectorAll('.edu-toggle').forEach((btn) => {
+    const panel = btn.nextElementSibling;
+    if (!panel || !panel.classList.contains('edu-activities')) return;
+    const icon = btn.querySelector('.edu-toggle__icon');
+    btn.addEventListener('click', () => {
+      const collapsed = panel.classList.toggle('edu-activities--collapsed');
+      btn.setAttribute('aria-expanded', String(!collapsed));
+      if (icon) icon.textContent = collapsed ? '+' : '\u2212';
+    });
   });
 }
