@@ -367,6 +367,13 @@ button:focus-visible {
   color: inherit;
 }
 
+.hero__subheading {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .hero__paragraph {
   font-size: var(--text-lg);
   color: var(--text-secondary);
