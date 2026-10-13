@@ -383,6 +383,65 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
+/* ── Hero split layout: circular photo + details side by side ── */
+.hero__split {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.hero__photo-wrap {
+  flex-shrink: 0;
+  animation: heroFadeIn 0.7s ease both;
+}
+
+.hero__photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  display: block;
+}
+
+.hero__content--split {
+  align-items: flex-start;
+  text-align: left;
+  max-width: none;
+}
+
+.hero__content--split .hero__actions {
+  justify-content: flex-start;
+}
+
+.hero__content--split .hero__paragraph {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .hero__split {
+    flex-direction: column;
+    gap: var(--sp-8);
+    text-align: center;
+  }
+
+  .hero__photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero__content--split {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__content--split .hero__actions {
+    justify-content: center;
+  }
+}
+
 
 /* ============================================================
    7. BUTTONS — Minimal, no icons
