@@ -479,20 +479,3 @@ function initBackToTop() {
   }, { passive: true });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
-
-
-/* ──────────────────────────────
-   15. EDUCATION — collapsible activities
-   ────────────────────────────── */
-function initEduToggle() {
-  document.querySelectorAll('.edu-toggle').forEach((btn) => {
-    const panel = btn.nextElementSibling;
-    if (!panel || !panel.classList.contains('edu-activities')) return;
-    const icon = btn.querySelector('.edu-toggle__icon');
-    btn.addEventListener('click', () => {
-      const collapsed = panel.classList.toggle('edu-activities--collapsed');
-      btn.setAttribute('aria-expanded', String(!collapsed));
-      if (icon) icon.textContent = collapsed ? '+' : '\u2212';
-    });
-  });
-}
