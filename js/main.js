@@ -1,5 +1,5 @@
 /* ============================================================
-   main.js — Dark Developer Portfolio
+   main.js - Dark Developer Portfolio
    Minimal interactions: nav, scroll fade-in, tabs,
    collapsible cards, copy-to-clipboard, progress bar.
    ============================================================ */
@@ -217,7 +217,7 @@ function initContactForm() {
     }
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     window.location.href = `mailto:jayveehilario26@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio inquiry')}&body=${encodeURIComponent(body)}`;
-    showMsg(form, 'Opening your email app — press Send there to deliver your message.', 'success');
+    showMsg(form, 'Opening your email app. Press Send there to deliver your message.', 'success');
     form.reset();
   });
 }
@@ -375,9 +375,9 @@ function initTerminal() {
 
   const commands = {
     help: 'try: whoami · skills · projects · contact · clear',
-    whoami: 'jayvee hilario — bsit student, aspiring developer & network engineer, metro manila',
+    whoami: 'jayvee hilario: bsit student, aspiring developer & network engineer, metro manila',
     skills: 'java · python · javascript · html/css · git · currently exploring ml',
-    projects: 'trading-agent (python) · hydroreminder (js) · this portfolio — see the projects section below',
+    projects: 'trading-agent (python) · hydroreminder (js) · this portfolio (see the projects section below)',
     contact: 'jayveehilario26@gmail.com · github.com/jvhlr',
     clear: null,
   };
@@ -407,7 +407,7 @@ function initTerminal() {
     printLine(true, raw);
     if (raw === 'clear') { replayBoot(); return; }
     if (commands[raw]) printLine(false, commands[raw]);
-    else printLine(false, `command not found: ${raw} — try 'help'`);
+    else printLine(false, `command not found: ${raw} (try 'help')`);
   });
 
   /* Clear replays the boot sequence instead of blanking the screen */
