@@ -290,7 +290,7 @@ function initLightbox() {
 function initTyped() {
   const el = document.getElementById('typed-text');
   if (!el) return;
-  const phrases = ['machine learning.', 'software development.', 'web apps.', 'mobile apps.'];
+  const phrases = ['machine learning.', 'software development.', 'web apps.', 'mobile apps.', 'game dev.'];
   let pi = 0, ci = 0, deleting = false;
   (function tick() {
     const word = phrases[pi];
@@ -314,35 +314,49 @@ async function initProjects() {
     if (!res.ok) throw new Error('github api');
     const repos = (await res.json()).filter(r => !r.fork && r.name !== 'OOP-Portfolio-Website');
     if (!repos.length) return;
+    const rewards = {
+      'Trading-Agent': 'Python, ML, backtesting',
+      'HydroReminder': 'React Native, notifications'
+    };
     grid.innerHTML = repos.map(repo => {
       const lang = repo.language ? `<span>${repo.language}</span> &middot; ` : '';
       const stars = `&#9733; ${repo.stargazers_count}`;
       const updated = new Date(repo.updated_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-      let desc = repo.description ? repo.description : 'No description yet.';
-      if (repo.name === 'Trading-Agent' || repo.name === 'HydroReminder') desc += ' (WIP)';
+      const desc = repo.description ? repo.description : 'No description yet.';
+      const wip = repo.name === 'Trading-Agent' || repo.name === 'HydroReminder';
+      const status = wip
+        ? '<span class="quest__status quest__status--wip">[IN PROGRESS]</span>'
+        : '<span class="quest__status">[ACTIVE]</span>';
+      const reward = rewards[repo.name] || (repo.language ? repo.language + ' XP' : 'XP');
       let thumb = '';
       if (repo.name === 'Trading-Agent') {
-        thumb = `<img class="feature__thumb" src="img/trading-agent-gui.jpg" alt="Trading-Agent Market Chart screen" loading="lazy">`;
+        thumb = `<img class="quest__img" src="img/trading-agent-gui.jpg" alt="Trading-Agent Market Chart screen" loading="lazy">`;
       } else if (repo.name === 'HydroReminder') {
-        thumb = `<img class="feature__thumb feature__thumb--icon" src="img/hydroreminder-icon.png" alt="HydroReminder app icon" loading="lazy">`;
+        thumb = `<img class="quest__img quest__img--icon" src="img/hydroreminder-icon.png" alt="HydroReminder app icon" loading="lazy">`;
       }
-      return `<article class="feature">
+      return `<article class="${thumb ? 'quest' : 'quest quest--noimg'}">
         ${thumb}
-        <h3 class="feature__title">${repo.name}</h3>
-        <p class="feature__text">${desc}</p>
-        <p class="feature__text feature__meta">${lang}${stars} &middot; updated ${updated}</p>
-        <p class="feature__text"><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+        <div class="quest__body">
+        <h3 class="quest__title">${repo.name} ${status}</h3>
+        <p class="quest__text">${desc}</p>
+        <p class="quest__reward">REWARD: ${reward}</p>
+        <p class="quest__meta">${lang}${stars} &middot; updated ${updated}</p>
+        <p class="quest__link"><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+        </div>
       </article>`;
     }).join('');
-    grid.innerHTML += `<article class="feature">
-        <img class="feature__thumb" src="img/kiosk-gui.jpg" alt="Government Assistance Kiosk welcome screen" loading="lazy">
-        <h3 class="feature__title">Government Assistance Kiosk</h3>
-        <p class="feature__text">A kiosk-style web app for government assistance applications: program selection, requirements checklist, document upload, reference-number tracking, and ID photo capture.</p>
-        <p class="feature__text"><a href="https://kioskkk.netlify.app/" target="_blank" rel="noopener noreferrer">Visit live site</a></p>
+    grid.innerHTML += `<article class="quest">
+        <img class="quest__img" src="img/kiosk-gui.jpg" alt="Government Assistance Kiosk welcome screen" loading="lazy">
+        <div class="quest__body">
+        <h3 class="quest__title">Government Assistance Kiosk <span class="quest__status">[COMPLETE]</span></h3>
+        <p class="quest__text">A kiosk-style web app for government assistance applications: program selection, requirements checklist, document upload, reference-number tracking, and ID photo capture.</p>
+        <p class="quest__reward">REWARD: Web development, deployment</p>
+        <p class="quest__link"><a href="https://kioskkk.netlify.app/" target="_blank" rel="noopener noreferrer">Visit live site</a></p>
+        </div>
       </article>`;
     grid.classList.add('visible');
   } catch (e) {
-    /* keep the static fallback cards */
+    /* keep the static fallback quests */
   }
 }
 
@@ -375,7 +389,7 @@ function initTerminal() {
 
   const commands = {
     help: 'try: whoami · skills · projects · contact · clear',
-    whoami: 'jayvee hilario: bsit student, aspiring developer & network engineer, metro manila',
+    whoami: 'jayvee hilario: bsit student, aspiring developer, network engineer & game dev, bulacan',
     skills: 'java · python · javascript · html/css · git · currently exploring ml',
     projects: 'trading-agent (python) · hydroreminder (js) · this portfolio (see the projects section below)',
     contact: 'jayveehilario26@gmail.com · github.com/jvhlr',
