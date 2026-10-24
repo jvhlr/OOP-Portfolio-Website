@@ -448,6 +448,9 @@ a {
 .features--three {
   grid-template-columns: repeat(3, 1fr);
 }
+.features--two {
+  grid-template-columns: repeat(2, 1fr);
+}
 .features--skills {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
@@ -986,7 +989,7 @@ a {
    17. RESPONSIVE
    ============================================================ */
 @media (max-width: 860px) {
-  .features--three { grid-template-columns: 1fr; }
+  .features--three, .features--two { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
 }
